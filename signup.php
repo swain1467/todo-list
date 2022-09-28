@@ -1,8 +1,9 @@
 <?php
 session_start();
-include("../asset/cdn_link.php");
-require_once("../asset/error_report.php");
-require_once("../asset/db_connection.php");
+include("utility/cdn_link.php");
+require_once("utility/error_report.php");
+require_once("utility/db_connection.php");
+checkSession();
 $pdo = pdo_connect();
 $msg = '';
 if(isset($_POST['btnSubmit']))
@@ -59,7 +60,7 @@ if(isset($_POST['btnSubmit']))
                     {
             
                         $_SESSION['user_name'] = $txtUserName;
-                        header('location:/dashboard/user_dashboard.php');
+                        header('location:/user_dashboard.php');
                     }
                     else
                     {
@@ -88,7 +89,7 @@ $pdo = null;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Page</title>
     <?php cssLink(); ?>
-    <link rel="stylesheet" href="/user_auth/css/style.css">
+    <link rel="stylesheet" href="/asset/css/custom/style.css">
 </head>
 <body>
     <div class="container">
@@ -136,6 +137,6 @@ $pdo = null;
         </div>
     </div>
     <?php jsLink(); ?>
-    <script src="js/signup.js"></script>
+    <script src="asset/js/custom/signup.js"></script>
 </body>
 </html>

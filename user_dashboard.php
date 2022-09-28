@@ -1,8 +1,8 @@
 <?php
-include("../asset/cdn_link.php");
-include("../asset/error_report.php");
-include("../asset/check_login.php");
-require_once("../asset/db_connection.php");
+include("utility/cdn_link.php");
+include("utility/error_report.php");
+include("utility/check_login.php");
+require_once("utility/db_connection.php");
 checkLogIn();
 ?>
 <!DOCTYPE html>
@@ -13,13 +13,13 @@ checkLogIn();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Dashboard</title>
     <?php cssLink(); ?>
-    <link rel="stylesheet" href="/dashboard/css/style.css">
+    <link rel="stylesheet" href="asset/css/custom/style.css">
 </head>
 <body>
     <div class="container">
         <div class="row nav-bar">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <a href="/user_auth/logout.php"><i class="fa fa-power-off"></i></a>
+                <a href="/logout.php"><i class="fa fa-power-off"></i></a>
             </div>
         </div>
         <div class="row">
@@ -75,6 +75,6 @@ checkLogIn();
         </div>
     </div>
     <?php jsLink(); ?> 
-    <script src="js/user_dashboard.js"></script>
+    <script src="asset/js/custom/user_dashboard.js"></script>
 </body>
 </html>

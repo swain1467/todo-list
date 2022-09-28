@@ -3,7 +3,7 @@ session_start();
 function checkLogIn(){
     if(!isset($_SESSION['user_name']))
     {
-        header('location:/user_auth/login.php');
+        header('location:/login.php');
         exit();
     }
 }
@@ -11,7 +11,7 @@ function checkLogIn(){
 function checkSession(){
     if(isset($_SESSION['user_name']))
     {
-        header('location:/dashboard/user_dashboard.php');
+        header('location:/user_dashboard.php');
         exit();
     }
 }

@@ -8,7 +8,7 @@
 
 body {
     /* background: #ecf0f3; */
-    background-image: url('/images/bgImg.jpeg');
+    background-image: url('/asset/img/bgImg.jpeg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -104,3 +104,27 @@ body {
   .logo:hover img {
     transform: scale(1.3) rotate(370deg);
   }
+/* -------------User Dashboard---------------- */
+
+.table{
+    margin-top: 20px;
+background-color: rgb(180, 207, 230);
+}
+.nav-bar{
+    background-color: bisque;
+    text-align: end;
+}
+
+.required{
+    color: rgb(187, 25, 25);
+    font-weight: bold;
+}
+
+h5{
+    color: black;
+    font-weight: bold;
+    font-style: italic;
+}
+.modal-header{
+    background-color: rgb(180, 207, 230);
+}
