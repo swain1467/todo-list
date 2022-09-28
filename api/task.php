@@ -1,5 +1,5 @@
 <?php
-require_once("../libs/tasks.php");
+require_once("../libs/task.php");
 
 $action = $_REQUEST['action'];
 
