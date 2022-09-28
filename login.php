@@ -71,7 +71,7 @@ $pdo = null;
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="wrapper">
                     <div class="logo">
-                        <img src="/images/logo.png" alt="Logo">
+                        <img src="/asset/img/logo.png" alt="Logo">
                     </div>
                     <div class="text-center mt-4 name">
                         T/D

@@ -1,56 +1,73 @@
 <?php
+require_once("../utility/db_connection.php");
+session_start();
 function getTaskDetails(){
     $pdo = pdo_connect();
 
-    $task_list = array();
+    $output = array(	
+		'aaData' => array(),
+        'status' => ''
+	);
 
     $data = [
         'user_name' => $_SESSION['user_name'],
         'status' => 1
     ];
-
-    $selectQuery = "SELECT id, header, content, 
-    created_on, created_by, update_on, updated_by,
+    $selectQuery = "SELECT id, CONCAT(header,':',content) as task, 
+    created_on, created_by, updated_on, updated_by
     FROM task_master WHERE created_by = :user_name AND status = :status";
-    
+
     $stmt= $pdo->prepare($selectQuery);
     if($stmt->execute($data)){
         $result = $stmt->fetchAll();
         foreach($result as $row){
-            $task_list = $row;
+            $output['aaData'][] = $row;
+            $output['status'] = 'Success';
         }
     } else{
-        $msg = $stmt->errorInfo();
+        $output['status'] = $stmt->errorInfo();
     }
     $pdo = null;
-    echo json_encode($task_list);
+    echo json_encode($output);
 }
 function saveTask(){
-    $pdo = pdo_connect();
-
-    $header = isset($_POST['txtHeader']) ? $_POST['txtHeader'] : '';
-    $content = isset($_POST['txtContent']) ? $_POST['txtContent'] : '';
-
-    $data = [
-        'header' => $txtUserName,
-        'content' => $content,
-        'created_on' => date("Y-m-d H:i:s"),
-        'created_by' => $_SESSION['user_name'],
-        'updated_on' => date("Y-m-d H:i:s"),
-        'updated_by' => $_SESSION['user_name'],
-        'status' => 1
-    ];
-    
-    $insert_query = "INSERT INTO task_master(header, content, created_on, created_by, updated_on, updated_by, status)
-            VALUES (:header, :content, :created_on, :created_by, :updated_on, :updated_by, :status)";
-    $stmt= $pdo->prepare($insert_query);
-    if($stmt->execute($data)){
-        $msg = "Task added successfully";
+    $task_header = isset($_POST['task_header']) ? $_POST['task_header'] : '';
+    $task_content = isset($_POST['task_content']) ? $_POST['task_content'] : '';
+    $output = array(	
+        'status' => '',
+        'message' => '',
+	);
+    if(!$task_header){
+        $output['status'] = 'Error';
+        $output['message'] = 'Header is required';
+    } else if(!$task_content){
+        $output['status'] = 'Error';
+        $output['message'] = 'Content is required';
     } else{
-        $msg = $stmt->errorInfo();
+        $pdo = pdo_connect();
+        $data = [
+            'header' => $task_header,
+            'content' => $task_content,
+            'created_on' => date("Y-m-d H:i:s"),
+            'created_by' => $_SESSION['user_name'],
+            'updated_on' => date("Y-m-d H:i:s"),
+            'updated_by' => $_SESSION['user_name'],
+            'status' => 1
+        ];
+        
+        $insert_query = "INSERT INTO task_master(header, content, created_on, created_by, updated_on, updated_by, status)
+                VALUES (:header, :content, :created_on, :created_by, :updated_on, :updated_by, :status)";
+        $stmt= $pdo->prepare($insert_query);
+        if($stmt->execute($data)){
+            $output['status'] = 'Success';
+            $output['message'] = 'Task added successfully';
+        } else{
+            $output['status'] = 'Failure';
+            $output['message'] = $stmt->errorInfo();
+        }
+        $pdo = null;
     }
-    $pdo = null;
-    echo json_encode($msg);
+    echo json_encode($output);
 }
 function updateTask(){
     $pdo = pdo_connect();

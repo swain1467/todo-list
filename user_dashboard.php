@@ -2,7 +2,6 @@
 include("utility/cdn_link.php");
 include("utility/error_report.php");
 include("utility/check_login.php");
-require_once("utility/db_connection.php");
 checkLogIn();
 ?>
 <!DOCTYPE html>
@@ -52,6 +51,7 @@ checkLogIn();
                     </div>
                     <div class="modal-body">
                         <form class="form-horizontal" role="form" id="frmTask">
+                                    <input type="hidden" class="form-control" name="txtTaskId" id="txtTaskId" autocomplete="off"/>
                             <div class="form-group">
                                 <label class="col-lg-4 col-md-4 col-sm-4 col-xs-12 control-label" for="txtHeader">Header :&nbsp;<span class="required">*</span></label>
                                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
@@ -67,7 +67,7 @@ checkLogIn();
                         </form>
                     </div>
                     <div class="modal-footer">
-					    <button class="btn btn-success btn-sm" id="btnSaveTask"><i class="fa fa-save"></i>&nbsp;Save</button>
+					    <button class="btn btn-primary btn-sm" id="btnSaveTask"><i class="fa fa-save"></i>&nbsp;Save</button>
                         <button class="btn btn-danger btn-sm" data-dismiss="modal"><i class="fa fa-close"></i>&nbsp;Close</button>
                     </div>
                 </div>
