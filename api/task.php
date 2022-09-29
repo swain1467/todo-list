@@ -10,7 +10,7 @@ switch($action){
     case 'saveTask'://Add task
         saveTask();
         break;	
-    case 'saveTask'://Update Task
+    case 'updateTask'://Update Task
         updateTask();
         break;	
     case 'deleteTask'://Update Task

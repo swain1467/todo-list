@@ -30,7 +30,7 @@ $(document).ready(function(){
                 "sName": "action",
                 "data": null,"sWidth": "10%",
                 "className": "text-center",
-             	"defaultContent": "<button class='btn btn-warning btn-sm action-btn'><i class='fa fa-edit'></i></button>&nbsp;&nbsp;<button class='btn btn-danger btn-sm action-btn'><i class='fa fa-trash'></i></button>"
+             	"defaultContent": "<button class='btn btn-warning btn-sm action-btn' onclick='updateTask(event)'><i class='fa fa-edit'></i></button>&nbsp;&nbsp;<button class='btn btn-danger btn-sm action-btn' onclick='deleteTask(event)'><i class='fa fa-trash'></i></button>"
             },
         ],
         buttons: [{
@@ -72,7 +72,7 @@ $(document).ready(function(){
                     $("#btnSaveTask").html('<i class="fa fa-save"></i>&nbsp;Save');
                     $("#btnSaveTask").removeAttr('disabled');
                     $('#modalTask').modal('hide');
-                    dtblTask.ajax.reload(null,false);  
+                    dtblTask.ajax.reload();
                     toastr.success(res.message);
                 } else if(res.status == 'Error'){
                     $("#btnSaveTask").html('<i class="fa fa-save"></i>&nbsp;Save');
@@ -90,4 +90,67 @@ $(document).ready(function(){
         }); 
     });
 });
+function updateTask(event)
+{
+	var dtblTask = $('#dtblTask').dataTable();
+	$(dtblTask.fnSettings().aoData).each(function () {
+		$(this.nTr).removeClass('success');
+	});
+	var row;
+	if (event.target.tagName == "BUTTON" || event.target.tagName == "A")
+		row = event.target.parentNode.parentNode;
+	else if (event.target.tagName == "I")
+		row = event.target.parentNode.parentNode.parentNode;
+	
+    $("#modalTaskHeader").html('Edit Task');
+    $("#btnSaveTask").html('<i class="fa fa-edit"></i>&nbsp;Update');
+    $("#btnSaveTask").removeAttr('disabled');
+
+    $("#txtTaskId").val(dtblTask.fnGetData(row)['id']);
+    $("#txtHeader").val(dtblTask.fnGetData(row)['header']);
+    $("#txtContent").val(dtblTask.fnGetData(row)['content']);
+    $('#modalTask').modal('show');
+}
+function deleteTask(event)
+{
+	var dtblTask = $('#dtblTask').dataTable();
+	$(dtblTask.fnSettings().aoData).each(function () {
+		$(this.nTr).removeClass('success');
+	});
+	var row;
+	if (event.target.tagName == "BUTTON" || event.target.tagName == "A")
+		row = event.target.parentNode.parentNode;
+	else if (event.target.tagName == "I")
+		row = event.target.parentNode.parentNode.parentNode;
+    swal({
+		title: 'Are you sure to delete ?',
+		text: "",
+		type: 'info',
+		showCancelButton: true,
+		confirmButtonColor: '#d33',
+		cancelButtonColor: '#3085d6',
+		confirmButtonText: 'Yes',
+		animation: true
+	}).then(function() {
+		$.ajax({
+			url: "api/task.php?action=deleteTask",
+			type: "POST",
+			data: { id:dtblTask.fnGetData(row)['id'] },
+			success: function(response) {
+                var res = jQuery.parseJSON(response);
+                if(res.status == 'Success'){
+                    let dtblTask = $("#dtblTask").DataTable();
+                    dtblTask.ajax.reload();
+                    toastr.success(res.message);
+                } else{
+                    toastr.error(res.message);
+                }
+			},
+			error: function() {
+				toastr.error('Unable to process Submit Operation');
+			}
+		});
+	}, 
+	function(dismiss) {}).done();
+}
 

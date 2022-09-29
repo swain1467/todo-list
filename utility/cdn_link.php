@@ -10,10 +10,11 @@ function cssLink() {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Data table -->
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
-    <!-- Data table buttons -->
-    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.4.1/css/buttons.dataTables.min.css"> -->
     <!-- Boostrap Modal -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Swal2 -->
+    <link rel="stylesheet" href="/asset/css/libs/sweetalert2.min.css">
+    
 
 <?php
 }
@@ -36,6 +37,8 @@ function jsLink() {
     <script src="https://cdn.datatables.net/buttons/1.4.1/js/buttons.flash.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.4.1/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.4.1/js/buttons.print.min.js"></script>
+    <!-- Swal2 -->
+    <script src="/asset/js/libs/sweetalert2.min.js"></script>
 <?php 
 }
 ?>

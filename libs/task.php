@@ -1,5 +1,6 @@
 <?php
 require_once("../utility/db_connection.php");
+require_once("../utility/error_report.php");
 session_start();
 function getTaskDetails(){
     $pdo = pdo_connect();
@@ -13,8 +14,8 @@ function getTaskDetails(){
         'user_name' => $_SESSION['user_name'],
         'status' => 1
     ];
-    $selectQuery = "SELECT id, CONCAT(header,':',content) as task, 
-    created_on, created_by, updated_on, updated_by
+    $selectQuery = "SELECT id, CONCAT(header,':',content) as task,
+    header, content, created_on, created_by, updated_on, updated_by
     FROM task_master WHERE created_by = :user_name AND status = :status";
 
     $stmt= $pdo->prepare($selectQuery);
@@ -70,56 +71,78 @@ function saveTask(){
     echo json_encode($output);
 }
 function updateTask(){
-    $pdo = pdo_connect();
+    $task_header = isset($_POST['task_header']) ? $_POST['task_header'] : '';
+    $task_content = isset($_POST['task_content']) ? $_POST['task_content'] : '';
+    $id = isset($_POST['task_id']) ? $_POST['task_id'] : '';
 
-    $header = isset($_POST['txtHeader']) ? $_POST['txtHeader'] : '';
-    $content = isset($_POST['txtContent']) ? $_POST['txtContent'] : '';
-    $id = isset($_POST['txtTaskId']) ? $_POST['txtTaskId'] : '';
-
-    $data = [
-        'header' => $header,
-        'content' => $content,
-        'updated_on' => date("Y-m-d H:i:s"),
-        'updated_by' => $_SESSION['user_name'],
-        'id' => $id
-    ];
-    
-    $update_query = "UPDATE task_master
-        SET header = :header, content = :content,
-            updated_on = :updated_on, updated_by = :updated_by
-        WHERE id = :id";
-
-    $stmt= $pdo->prepare($update_query);
-    if($stmt->execute($data)){
-        $msg = "Task updated successfully";
+    $output = array(	
+        'status' => '',
+        'message' => '',
+	);
+    if(!$task_header){
+        $output['status'] = 'Error';
+        $output['message'] = 'Header is required';
+    } else if(!$task_content){
+        $output['status'] = 'Error';
+        $output['message'] = 'Content is required';
     } else{
-        $msg = $stmt->errorInfo();
+
+        $pdo = pdo_connect();
+        $data = [
+            'header' => $task_header,
+            'content' => $task_content,
+            'updated_on' => date("Y-m-d H:i:s"),
+            'updated_by' => $_SESSION['user_name'],
+            'id' => $id
+        ];
+        
+        $update_query = "UPDATE task_master
+            SET header = :header, content = :content,
+                updated_on = :updated_on, updated_by = :updated_by
+            WHERE id = :id";
+    
+        $stmt= $pdo->prepare($update_query);
+        if($stmt->execute($data)){
+            $output['status'] = 'Success';
+            $output['message'] = 'Task updated successfully';
+        } else{
+            $output['status'] = 'Failure';
+            $output['message'] = $stmt->errorInfo();
+        }
+        $pdo = null;
     }
-    $pdo = null;
-    echo json_encode($msg);
+    echo json_encode($output);
 }
 function deleteTask(){
+    $id = isset($_POST['id']) ? $_POST['id'] : '';
+    $output = array(	
+        'status' => '',
+        'message' => '',
+	);
+
     $pdo = pdo_connect();
-
-    $id = isset($_POST['txtTaskId']) ? $_POST['txtTaskId'] : '';
-
+    
     $data = [
         'updated_on' => date("Y-m-d H:i:s"),
         'updated_by' => $_SESSION['user_name'],
+        'status' => 0,
         'id' => $id
     ];
     
     $update_query = "UPDATE task_master
-        SET updated_on = :updated_on, updated_by = :updated_by
-        WHERE id = :id";
+        SET updated_on = :updated_on, updated_by = :updated_by,
+        status = :status WHERE id = :id";
 
     $stmt= $pdo->prepare($update_query);
     if($stmt->execute($data)){
-        $msg = "Task deleted successfully";
+
+        $output['status'] = 'Success';
+        $output['message'] = 'Task deleted successfully';
     } else{
-        $msg = $stmt->errorInfo();
+        $output['status'] = 'Failure';
+        $output['message'] = $stmt->errorInfo();
     }
     $pdo = null;
-    echo json_encode($msg);
+    echo json_encode($output);
 }
 ?>
