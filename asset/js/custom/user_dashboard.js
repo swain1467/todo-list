@@ -11,8 +11,8 @@ $(document).ready(function(){
             "data": {}
           },
         pageLength: 10,
-        bProcessing: false,
-        bServerSide: false,
+        bProcessing: true,//server side pagination
+        bServerSide: true,//server side pagination
         bStateSave: false,
         bPaginate: true,
         bLengthChange: true,
@@ -90,8 +90,8 @@ $(document).ready(function(){
         }); 
     });
 });
-function updateTask(event)
-{
+// Task update function
+function updateTask(event) {
 	var dtblTask = $('#dtblTask').dataTable();
 	$(dtblTask.fnSettings().aoData).each(function () {
 		$(this.nTr).removeClass('success');
@@ -111,8 +111,8 @@ function updateTask(event)
     $("#txtContent").val(dtblTask.fnGetData(row)['content']);
     $('#modalTask').modal('show');
 }
-function deleteTask(event)
-{
+// Task delete function
+function deleteTask(event) {
 	var dtblTask = $('#dtblTask').dataTable();
 	$(dtblTask.fnSettings().aoData).each(function () {
 		$(this.nTr).removeClass('success');

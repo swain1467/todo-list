@@ -3,6 +3,17 @@ require_once("../utility/db_connection.php");
 require_once("../utility/error_report.php");
 session_start();
 function getTaskDetails(){
+
+    $length = $_GET['length'];
+	$start = $_GET['start'];
+	$search = $_GET['search'];
+    $where="";
+    if( !empty($_GET['search']['value']) ) { 
+        $where.=" AND ( lower(header) LIKE '%".strtolower($_GET['search']['value'])."%' ";    
+        $where.=" OR lower(content) LIKE '%".strtolower($_GET['search']['value'])."%' )";
+    }
+
+    
     $pdo = pdo_connect();
 
     $output = array(	
@@ -16,7 +27,18 @@ function getTaskDetails(){
     ];
     $selectQuery = "SELECT id, CONCAT(header,':',content) as task,
     header, content, created_on, created_by, updated_on, updated_by
-    FROM task_master WHERE created_by = :user_name AND status = :status";
+    FROM task_master WHERE created_by = :user_name AND status = :status
+    ORDER BY updated_on DESC";
+
+    $stmt= $pdo->prepare($selectQuery);
+    $stmt->execute($data);
+    $output['recordsTotal'] = COUNT($stmt->fetchAll()); 
+    // $output['recordsFiltered'] = COUNT($stmt->fetchAll()); 
+    
+    $selectQuery = "SELECT id, CONCAT(header,':',content) as task,
+    header, content, created_on, created_by, updated_on, updated_by
+    FROM task_master WHERE created_by = :user_name AND status = :status $where
+    ORDER BY updated_on DESC LIMIT $length OFFSET $start";
 
     $stmt= $pdo->prepare($selectQuery);
     if($stmt->execute($data)){
