@@ -2,26 +2,26 @@ $(document).ready(function(){
     // Data table for task management
     let dtblTask = $('#dtblTask').DataTable({
         lengthMenu: [
-            [10, 20, 50, 100, 500, -1],
-            [10, 20, 50, 100, 500, "ALL"],
+            [5, 20, 50, 100, 500, -1],
+            [5, 20, 50, 100, 500, "ALL"],
         ],
         ajax: {
             "url": "api/task.php?action=getTaskDetails",
             "type": "GET",
             "data": {}
           },
-        pageLength: 10,
+        pageLength: 5,
         bProcessing: true,//server side pagination
         bServerSide: true,//server side pagination
         bStateSave: false,
         bPaginate: true,
         bLengthChange: true,
-        bFilter: true,
+        bFilter: false,
         bSort: false,
         bInfo: true,
         bAutoWidth: false,
         bDestroy: true,
-        "sDom": "<'row'<'col-lg-4 col-md-4 col-sm-4'B><'col-lg-4 col-md-4 col-sm-4'l><'col-lg-4 col-md-4 col-sm-4'f>>" +
+        "sDom": "<'row'<'col-lg-9 col-md-9 col-sm-9'B><'col-lg-3 col-md-3 col-sm-3'l><'col-lg-4 col-md-4 col-sm-4'f>>" +
                 "<'row'<'col-lg-12 col-md-12 col-sm-12'tr>>" +
                 "<'row'<'col-lg-9 col-md-9 col-sm-9'i><'col-lg-3 col-md-3 col-sm-3'p>>",
         "aoColumns": [

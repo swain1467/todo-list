@@ -1,44 +1,40 @@
 <?php
 require_once("../utility/db_connection.php");
 require_once("../utility/error_report.php");
-session_start();
-function getTaskDetails(){
+require_once("query_builder.php");
 
-    $length = $_GET['length'];
-	$start = $_GET['start'];
-	$search = $_GET['search'];
-    $where="";
-    if( !empty($_GET['search']['value']) ) { 
-        $where.=" AND ( lower(header) LIKE '%".strtolower($_GET['search']['value'])."%' ";    
-        $where.=" OR lower(content) LIKE '%".strtolower($_GET['search']['value'])."%' )";
-    }
-
-    
+function getTaskDetails($length, $start, $search, $user_name, $status) {
     $pdo = pdo_connect();
-
     $output = array(	
 		'aaData' => array(),
         'status' => ''
 	);
 
     $data = [
-        'user_name' => $_SESSION['user_name'],
-        'status' => 1
+        'user_name' => $user_name,
+        'status' => $status
     ];
-    $selectQuery = "SELECT id, CONCAT(header,':',content) as task,
-    header, content, created_on, created_by, updated_on, updated_by
-    FROM task_master WHERE created_by = :user_name AND status = :status
-    ORDER BY updated_on DESC";
+
+    $selectQuery = "SELECT id, CONCAT(header,':',content) as task, header, content
+        FROM task_master WHERE created_by = :user_name AND status = :status
+        ORDER BY updated_on DESC";
 
     $stmt= $pdo->prepare($selectQuery);
     $stmt->execute($data);
     $output['recordsTotal'] = COUNT($stmt->fetchAll()); 
-    // $output['recordsFiltered'] = COUNT($stmt->fetchAll()); 
+    $output['recordsFiltered'] = COUNT($stmt->fetchAll()); 
     
-    $selectQuery = "SELECT id, CONCAT(header,':',content) as task,
-    header, content, created_on, created_by, updated_on, updated_by
-    FROM task_master WHERE created_by = :user_name AND status = :status $where
-    ORDER BY updated_on DESC LIMIT $length OFFSET $start";
+    // $selectQuery = "SELECT id, CONCAT(header,':',content) as task, header, content
+    // FROM task_master WHERE created_by = :user_name AND status = :status $where
+    // ORDER BY updated_on DESC LIMIT $length OFFSET $start";
+
+    $selectQuery = (new SelectQueryBuilder())
+                    ->select('id', 'CONCAT(header,":",content) as task', 'header', 'content')
+                    ->from('task_master')
+                    ->where('created_by = :user_name', 'status = :status')
+                    ->orderBy('created_on')
+                    ->limit($length)
+                    ->offSet($start);
 
     $stmt= $pdo->prepare($selectQuery);
     if($stmt->execute($data)){
@@ -51,11 +47,9 @@ function getTaskDetails(){
         $output['status'] = $stmt->errorInfo();
     }
     $pdo = null;
-    echo json_encode($output);
+    return $output;
 }
-function saveTask(){
-    $task_header = isset($_POST['task_header']) ? $_POST['task_header'] : '';
-    $task_content = isset($_POST['task_content']) ? $_POST['task_content'] : '';
+function saveTask($task_header, $task_content, $user_name, $status) {
     $output = array(	
         'status' => '',
         'message' => '',
@@ -72,14 +66,17 @@ function saveTask(){
             'header' => $task_header,
             'content' => $task_content,
             'created_on' => date("Y-m-d H:i:s"),
-            'created_by' => $_SESSION['user_name'],
+            'created_by' => $user_name,
             'updated_on' => date("Y-m-d H:i:s"),
-            'updated_by' => $_SESSION['user_name'],
-            'status' => 1
+            'status' => $status
         ];
         
-        $insert_query = "INSERT INTO task_master(header, content, created_on, created_by, updated_on, updated_by, status)
-                VALUES (:header, :content, :created_on, :created_by, :updated_on, :updated_by, :status)";
+        // $insert_query = "INSERT INTO task_master(header, content, created_on, created_by, updated_on, status)
+        //         VALUES (:header, :content, :created_on, :created_by, :updated_on, :status)";
+        $insert_query = (new InsertQueryBuilder())
+        ->insert('task_master')
+        ->columns('header', 'content', 'created_on', 'created_by', 'updated_on', 'status');
+        
         $stmt= $pdo->prepare($insert_query);
         if($stmt->execute($data)){
             $output['status'] = 'Success';
@@ -90,13 +87,9 @@ function saveTask(){
         }
         $pdo = null;
     }
-    echo json_encode($output);
+    return $output;
 }
-function updateTask(){
-    $task_header = isset($_POST['task_header']) ? $_POST['task_header'] : '';
-    $task_content = isset($_POST['task_content']) ? $_POST['task_content'] : '';
-    $id = isset($_POST['task_id']) ? $_POST['task_id'] : '';
-
+function updateTask($task_header, $task_content, $id) {
     $output = array(	
         'status' => '',
         'message' => '',
@@ -114,14 +107,18 @@ function updateTask(){
             'header' => $task_header,
             'content' => $task_content,
             'updated_on' => date("Y-m-d H:i:s"),
-            'updated_by' => $_SESSION['user_name'],
             'id' => $id
         ];
         
-        $update_query = "UPDATE task_master
-            SET header = :header, content = :content,
-                updated_on = :updated_on, updated_by = :updated_by
-            WHERE id = :id";
+        // $update_query = "UPDATE task_master
+        //     SET header = :header, content = :content,
+        //         updated_on = :updated_on
+        //     WHERE id = :id";
+
+        $update_query = (new UpdateQueryBuilder())
+        ->update('task_master')
+        ->set('header', 'content', 'updated_on')
+        ->where('id = :id');
     
         $stmt= $pdo->prepare($update_query);
         if($stmt->execute($data)){
@@ -133,10 +130,9 @@ function updateTask(){
         }
         $pdo = null;
     }
-    echo json_encode($output);
+    return $output;
 }
-function deleteTask(){
-    $id = isset($_POST['id']) ? $_POST['id'] : '';
+function deleteTask($id, $status) {
     $output = array(	
         'status' => '',
         'message' => '',
@@ -146,14 +142,12 @@ function deleteTask(){
     
     $data = [
         'updated_on' => date("Y-m-d H:i:s"),
-        'updated_by' => $_SESSION['user_name'],
         'status' => 0,
         'id' => $id
     ];
     
     $update_query = "UPDATE task_master
-        SET updated_on = :updated_on, updated_by = :updated_by,
-        status = :status WHERE id = :id";
+        SET updated_on = :updated_on, status = :status WHERE id = :id";
 
     $stmt= $pdo->prepare($update_query);
     if($stmt->execute($data)){
@@ -165,6 +159,6 @@ function deleteTask(){
         $output['message'] = $stmt->errorInfo();
     }
     $pdo = null;
-    echo json_encode($output);
+    return $output;
 }
 ?>
