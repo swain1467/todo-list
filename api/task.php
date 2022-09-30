@@ -1,4 +1,5 @@
 <?php
+require_once("../utility/error_report.php");
 require_once("../libs/task.php");
 require_once("../utility/check_req.php");
 
@@ -13,7 +14,7 @@ switch($action){
         $search = isset($_GET['search']['value']) ? $_GET['search']['value'] : '';
         $status = 1;
         
-        $output = getTaskDetails ($length, $start, $search, $user_name, $status); //Get task list
+        $output = TaskModel::getTaskDetails ($length, $start, $search, $user_name, $status); //Get task list
         echo json_encode($output);
         break;
     }
@@ -22,7 +23,7 @@ switch($action){
         $task_content = isset($_POST['task_content']) ? $_POST['task_content'] : '';
         $status = 1;
         
-        $output = saveTask($task_header, $task_content, $user_name, $status); //Add task
+        $output = TaskModel::saveTask($task_header, $task_content, $user_name, $status); //Add task
         echo json_encode($output);
         break;	
     }
@@ -31,7 +32,7 @@ switch($action){
         $task_content = isset($_POST['task_content']) ? $_POST['task_content'] : '';
         $id = isset($_POST['task_id']) ? $_POST['task_id'] : '';
         
-        $output = updateTask($task_header, $task_content, $id); //Update Task
+        $output = TaskModel::updateTask($task_header, $task_content, $id); //Update Task
         echo json_encode($output);
         break;	
     }
@@ -39,7 +40,7 @@ switch($action){
         $id = isset($_POST['id']) ? $_POST['id'] : '';
         $status = 0;
 
-        $output = deleteTask($id, $status); //Update Task
+        $output = TaskModel::deleteTask($id, $status); //Update Task
         echo json_encode($output);
         break;	                                      	                                         	   
     }

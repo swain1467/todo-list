@@ -5,14 +5,14 @@ $(document).ready(function(){
             [5, 20, 50, 100, 500, -1],
             [5, 20, 50, 100, 500, "ALL"],
         ],
+        pageLength: 5,
+        bProcessing: true,//server side pagination
+        bServerSide: true,//server side pagination
         ajax: {
             "url": "api/task.php?action=getTaskDetails",
             "type": "GET",
             "data": {}
           },
-        pageLength: 5,
-        bProcessing: true,//server side pagination
-        bServerSide: true,//server side pagination
         bStateSave: false,
         bPaginate: true,
         bLengthChange: true,

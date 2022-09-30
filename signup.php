@@ -2,7 +2,7 @@
 include("utility/cdn_link.php");
 require_once("utility/error_report.php");
 include("utility/check_login.php");
-require_once("utility/db_connection.php");
+require_once("libs/db/db_connection.php");
 checkSession();
 $pdo = pdo_connect();
 $msg = '';

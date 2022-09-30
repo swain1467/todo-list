@@ -1,164 +1,162 @@
 <?php
-require_once("../utility/db_connection.php");
 require_once("../utility/error_report.php");
-require_once("query_builder.php");
+require_once("db/query_builder.php");
+require_once("db/DBCore.class.php");
 
-function getTaskDetails($length, $start, $search, $user_name, $status) {
-    $pdo = pdo_connect();
-    $output = array(	
-		'aaData' => array(),
-        'status' => ''
-	);
-
-    $data = [
-        'user_name' => $user_name,
-        'status' => $status
-    ];
-
-    $selectQuery = "SELECT id, CONCAT(header,':',content) as task, header, content
-        FROM task_master WHERE created_by = :user_name AND status = :status
-        ORDER BY updated_on DESC";
-
-    $stmt= $pdo->prepare($selectQuery);
-    $stmt->execute($data);
-    $output['recordsTotal'] = COUNT($stmt->fetchAll()); 
-    $output['recordsFiltered'] = COUNT($stmt->fetchAll()); 
-    
-    // $selectQuery = "SELECT id, CONCAT(header,':',content) as task, header, content
-    // FROM task_master WHERE created_by = :user_name AND status = :status $where
-    // ORDER BY updated_on DESC LIMIT $length OFFSET $start";
+function getRowCount($data){
 
     $selectQuery = (new SelectQueryBuilder())
-                    ->select('id', 'CONCAT(header,":",content) as task', 'header', 'content')
-                    ->from('task_master')
-                    ->where('created_by = :user_name', 'status = :status')
-                    ->orderBy('created_on')
-                    ->limit($length)
-                    ->offSet($start);
+    ->select('id', 'CONCAT(header,":",content) as task', 'header', 'content')
+    ->from('task_master')
+    ->where('created_by = :user_name', 'status = :status')
+    ->orderBy('created_on');
 
-    $stmt= $pdo->prepare($selectQuery);
-    if($stmt->execute($data)){
-        $result = $stmt->fetchAll();
-        foreach($result as $row){
+    $result = DBCore::executeQuery($selectQuery,$data);
+    $all_rows = DBCore::getAllRows($result);
+
+    return count($all_rows);
+}
+class TaskModel {
+    //Task Select  
+    public static function getTaskDetails($length, $start, $search, $user_name, $status) {
+
+        $output = array(	
+            'aaData' => array(),
+            'status' => ''
+        );
+    
+        $data = [
+            'user_name' => $user_name,
+            'status' => $status
+        ];
+
+        $output['recordsTotal'] = getRowCount($data);
+        $output['recordsFiltered'] = getRowCount($data);
+    
+        $selectQuery = (new SelectQueryBuilder())
+                        ->select('id', 'CONCAT(header,":",content) as task', 'header', 'content')
+                        ->from('task_master')
+                        ->where('created_by = :user_name', 'status = :status')
+                        ->orderBy('created_on')
+                        ->limit($length)
+                        ->offSet($start);
+        $result = DBCore::executeQuery($selectQuery,$data);
+        
+        $all_rows = DBCore::getAllRows($result);
+      if($result['status']){
+        foreach($all_rows as $row){
             $output['aaData'][] = $row;
             $output['status'] = 'Success';
         }
-    } else{
-        $output['status'] = $stmt->errorInfo();
+      } else {
+        $output['status'] = 'Failure';
+      }
+        
+        return $output;
     }
-    $pdo = null;
-    return $output;
-}
-function saveTask($task_header, $task_content, $user_name, $status) {
-    $output = array(	
-        'status' => '',
-        'message' => '',
-	);
-    if(!$task_header){
-        $output['status'] = 'Error';
-        $output['message'] = 'Header is required';
-    } else if(!$task_content){
-        $output['status'] = 'Error';
-        $output['message'] = 'Content is required';
-    } else{
-        $pdo = pdo_connect();
-        $data = [
-            'header' => $task_header,
-            'content' => $task_content,
-            'created_on' => date("Y-m-d H:i:s"),
-            'created_by' => $user_name,
-            'updated_on' => date("Y-m-d H:i:s"),
-            'status' => $status
-        ];
-        
-        // $insert_query = "INSERT INTO task_master(header, content, created_on, created_by, updated_on, status)
-        //         VALUES (:header, :content, :created_on, :created_by, :updated_on, :status)";
-        $insert_query = (new InsertQueryBuilder())
-        ->insert('task_master')
-        ->columns('header', 'content', 'created_on', 'created_by', 'updated_on', 'status');
-        
-        $stmt= $pdo->prepare($insert_query);
-        if($stmt->execute($data)){
-            $output['status'] = 'Success';
-            $output['message'] = 'Task added successfully';
+    //Task Insert 
+    public static function saveTask($task_header, $task_content, $user_name, $status) {
+        $output = array(	
+            'status' => '',
+            'message' => '',
+        );
+        if(!$task_header){
+            $output['status'] = 'Error';
+            $output['message'] = 'Header is required';
+        } else if(!$task_content){
+            $output['status'] = 'Error';
+            $output['message'] = 'Content is required';
         } else{
-            $output['status'] = 'Failure';
-            $output['message'] = $stmt->errorInfo();
+            $data = [
+                'header' => $task_header,
+                'content' => $task_content,
+                'created_on' => date("Y-m-d H:i:s"),
+                'created_by' => $user_name,
+                'updated_on' => date("Y-m-d H:i:s"),
+                'status' => $status
+            ];
+            
+            $insert_query = (new InsertQueryBuilder())
+            ->insert('task_master')
+            ->columns('header', 'content', 'created_on', 'created_by', 'updated_on', 'status');
+            
+            $result = DBCore::executeQuery($insert_query,$data);
+        
+            if($result['status']){
+                $output['status'] = 'Success';
+                $output['message'] = 'Task added successfully';
+            } else{
+                $output['status'] = 'Failure';
+                $output['message'] = $result['error'];
+            }
         }
-        $pdo = null;
+        return $output;
     }
-    return $output;
-}
-function updateTask($task_header, $task_content, $id) {
-    $output = array(	
-        'status' => '',
-        'message' => '',
-	);
-    if(!$task_header){
-        $output['status'] = 'Error';
-        $output['message'] = 'Header is required';
-    } else if(!$task_content){
-        $output['status'] = 'Error';
-        $output['message'] = 'Content is required';
-    } else{
-
-        $pdo = pdo_connect();
+    //Task Update 
+    public static function updateTask($task_header, $task_content, $id) {
+        $output = array(	
+            'status' => '',
+            'message' => '',
+        );
+        if(!$task_header){
+            $output['status'] = 'Error';
+            $output['message'] = 'Header is required';
+        } else if(!$task_content){
+            $output['status'] = 'Error';
+            $output['message'] = 'Content is required';
+        } else{
+            $data = [
+                'header' => $task_header,
+                'content' => $task_content,
+                'updated_on' => date("Y-m-d H:i:s"),
+                'id' => $id
+            ];
+            
+            $update_query = (new UpdateQueryBuilder())
+            ->update('task_master')
+            ->set('header', 'content', 'updated_on')
+            ->where('id = :id');
+        
+            $result = DBCore::executeQuery($update_query,$data);
+    
+            if($result['status']){
+                $output['status'] = 'Success';
+                $output['message'] = 'Task updated successfully';
+            } else{
+                $output['status'] = 'Failure';
+                $output['message'] = $result['error'];
+            }
+        }
+        return $output;
+    }
+    //Task Delete 
+    public static function deleteTask($id, $status) {
+        $output = array(	
+            'status' => '',
+            'message' => '',
+        );
+        
         $data = [
-            'header' => $task_header,
-            'content' => $task_content,
             'updated_on' => date("Y-m-d H:i:s"),
+            'status' => 0,
             'id' => $id
         ];
-        
-        // $update_query = "UPDATE task_master
-        //     SET header = :header, content = :content,
-        //         updated_on = :updated_on
-        //     WHERE id = :id";
-
+    
         $update_query = (new UpdateQueryBuilder())
         ->update('task_master')
-        ->set('header', 'content', 'updated_on')
+        ->set('updated_on', 'status')
         ->where('id = :id');
     
-        $stmt= $pdo->prepare($update_query);
-        if($stmt->execute($data)){
-            $output['status'] = 'Success';
-            $output['message'] = 'Task updated successfully';
-        } else{
-            $output['status'] = 'Failure';
-            $output['message'] = $stmt->errorInfo();
-        }
-        $pdo = null;
-    }
-    return $output;
-}
-function deleteTask($id, $status) {
-    $output = array(	
-        'status' => '',
-        'message' => '',
-	);
-
-    $pdo = pdo_connect();
+        $result = DBCore::executeQuery($update_query,$data);
     
-    $data = [
-        'updated_on' => date("Y-m-d H:i:s"),
-        'status' => 0,
-        'id' => $id
-    ];
-    
-    $update_query = "UPDATE task_master
-        SET updated_on = :updated_on, status = :status WHERE id = :id";
-
-    $stmt= $pdo->prepare($update_query);
-    if($stmt->execute($data)){
-
-        $output['status'] = 'Success';
-        $output['message'] = 'Task deleted successfully';
-    } else{
-        $output['status'] = 'Failure';
-        $output['message'] = $stmt->errorInfo();
+            if($result['status']){
+                $output['status'] = 'Success';
+                $output['message'] = 'Task deleted successfully';
+            } else{
+                $output['status'] = 'Failure';
+                $output['message'] = $result['error'];
+            }
+        return $output;
     }
-    $pdo = null;
-    return $output;
 }
 ?>

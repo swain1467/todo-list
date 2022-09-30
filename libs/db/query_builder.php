@@ -12,13 +12,19 @@ class SelectQueryBuilder {
 
     public function __toString(): string{
         $where = $this->conditions === [] ? '' : ' WHERE ' . implode(' AND ', $this->conditions);
-
-        return 'SELECT ' . implode(', ', $this->fields)
+        if($this->limit){
+            return 'SELECT ' . implode(', ', $this->fields)
             . ' FROM ' . implode(', ', $this->from)
             . $where
             .' ORDER BY '.implode(', ', $this->col_list)
             .' LIMIT '. $this->limit
             .' OFFSET '. $this->off_set;
+        } else{
+            return 'SELECT ' . implode(', ', $this->fields)
+            . ' FROM ' . implode(', ', $this->from)
+            . $where
+            .' ORDER BY '.implode(', ', $this->col_list);
+        }
     }
 
     public function select(string ...$select){
