@@ -1,7 +1,7 @@
 <?php
-include("utility/cdn_link.php");
-include("utility/error_report.php");
-include("utility/check_login.php");
+require_once("config.php");
+require_once(UTILITY_DIR."cdn_link.php");
+require_once(UTILITY_DIR."check_login.php");
 checkLogIn();
 ?>
 <!DOCTYPE html>

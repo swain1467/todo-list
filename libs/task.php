@@ -1,7 +1,7 @@
 <?php
-require_once("../utility/error_report.php");
-require_once("db/query_builder.php");
-require_once("db/DBCore.class.php");
+require_once(UTILITY_DIR."file_include.php");
+require_once(LIB_DIR."/db/query_builder.php");
+require_once(LIB_DIR."/db/DBCore.class.php");
 
 function getRowCount($data){
 
@@ -43,7 +43,9 @@ class TaskModel {
         $result = DBCore::executeQuery($selectQuery,$data);
         
         $all_rows = DBCore::getAllRows($result);
+
       if($result['status']){
+
         foreach($all_rows as $row){
             $output['aaData'][] = $row;
             $output['status'] = 'Success';
@@ -56,40 +58,36 @@ class TaskModel {
     }
     //Task Insert 
     public static function saveTask($task_header, $task_content, $user_name, $status) {
-        $output = array(	
-            'status' => '',
-            'message' => '',
-        );
+
         if(!$task_header){
-            $output['status'] = 'Error';
-            $output['message'] = 'Header is required';
-        } else if(!$task_content){
-            $output['status'] = 'Error';
-            $output['message'] = 'Content is required';
-        } else{
-            $data = [
-                'header' => $task_header,
-                'content' => $task_content,
-                'created_on' => date("Y-m-d H:i:s"),
-                'created_by' => $user_name,
-                'updated_on' => date("Y-m-d H:i:s"),
-                'status' => $status
-            ];
-            
-            $insert_query = (new InsertQueryBuilder())
-            ->insert('task_master')
-            ->columns('header', 'content', 'created_on', 'created_by', 'updated_on', 'status');
-            
-            $result = DBCore::executeQuery($insert_query,$data);
-        
-            if($result['status']){
-                $output['status'] = 'Success';
-                $output['message'] = 'Task added successfully';
-            } else{
-                $output['status'] = 'Failure';
-                $output['message'] = $result['error'];
-            }
+            throw new Exception('Header is required');
         }
+        if(!$task_content){
+            throw new Exception('Content is required');
+        } 
+        $data = [
+            'header' => $task_header,
+            'content' => $task_content,
+            'created_on' => date("Y-m-d H:i:s"),
+            'created_by' => $user_name,
+            'updated_on' => date("Y-m-d H:i:s"),
+            'status' => $status
+        ];
+        
+        $insert_query = (new InsertQueryBuilder())
+        ->insert('task_master')
+        ->columns('header', 'content', 'created_on', 'created_by', 'updated_on', 'status');
+        
+        $result = DBCore::executeQuery($insert_query,$data);
+    
+        if($result['status']){
+            $output['status'] = 'Success';
+            $output['message'] = 'Task added successfully';
+        } else{
+            $output['status'] = 'Failure';
+            $output['message'] = 'Oops! something Went wrong';
+        }
+        
         return $output;
     }
     //Task Update 
@@ -98,35 +96,35 @@ class TaskModel {
             'status' => '',
             'message' => '',
         );
+
         if(!$task_header){
-            $output['status'] = 'Error';
-            $output['message'] = 'Header is required';
-        } else if(!$task_content){
-            $output['status'] = 'Error';
-            $output['message'] = 'Content is required';
-        } else{
-            $data = [
-                'header' => $task_header,
-                'content' => $task_content,
-                'updated_on' => date("Y-m-d H:i:s"),
-                'id' => $id
-            ];
-            
-            $update_query = (new UpdateQueryBuilder())
-            ->update('task_master')
-            ->set('header', 'content', 'updated_on')
-            ->where('id = :id');
-        
-            $result = DBCore::executeQuery($update_query,$data);
-    
-            if($result['status']){
-                $output['status'] = 'Success';
-                $output['message'] = 'Task updated successfully';
-            } else{
-                $output['status'] = 'Failure';
-                $output['message'] = $result['error'];
-            }
+            throw new Exception('Header is required');
         }
+        if(!$task_content){
+            throw new Exception('Content is required');
+        } 
+        $data = [
+            'header' => $task_header,
+            'content' => $task_content,
+            'updated_on' => date("Y-m-d H:i:s"),
+            'id' => $id
+        ];
+        
+        $update_query = (new UpdateQueryBuilder())
+        ->update('task_master')
+        ->set('header', 'content', 'updated_on')
+        ->where('id = :id');
+    
+        $result = DBCore::executeQuery($update_query,$data);
+
+        if($result['status']){
+            $output['status'] = 'Success';
+            $output['message'] = 'Task updated successfully';
+        } else{
+            $output['status'] = 'Failure';
+            $output['message'] = 'Oops! something Went wrong';
+        }
+    
         return $output;
     }
     //Task Delete 
@@ -154,7 +152,7 @@ class TaskModel {
                 $output['message'] = 'Task deleted successfully';
             } else{
                 $output['status'] = 'Failure';
-                $output['message'] = $result['error'];
+                $output['message'] = 'Oops! something Went wrong';
             }
         return $output;
     }

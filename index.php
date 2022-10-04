@@ -1,6 +1,6 @@
 <?php
-require_once("utility/error_report.php");
-require_once("utility/check_login.php");
+require_once("config.php");
+require_once(UTILITY_DIR."check_login.php");
 checkLogIn();
 checkSession();
 ?>

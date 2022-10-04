@@ -1,5 +1,4 @@
 <?php
-require_once("../utility/error_report.php");
 // Select Query Builder 
 class SelectQueryBuilder {
 

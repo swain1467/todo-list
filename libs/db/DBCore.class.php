@@ -1,13 +1,19 @@
 <?php
-require_once("db_connection.php");
-
+require_once(ROOT_DIR."utility/file_include.php");
+require_once(LIB_DIR."db/db_connection.php");
 class DBCore {
-
 	public static function executeQuery($sqlString, $data) {
 		$pdo = pdo_connect();
     	$pdoStmt = $pdo->prepare($sqlString);
     	$pdoStatus = $pdoStmt->execute($data);
 		$pdo = null;
+		if(DB_LOG){
+			ErrorLog::log('DB_Log_Query->'.$sqlString);
+			ErrorLog::log($data);
+		}
+		if(!$pdoStatus){
+			ErrorLog::log($pdoStmt->errorInfo());
+		}
     	return [
     		'status' => $pdoStatus ? 1: 0,
     		'error' => $pdoStatus ? '': $pdoStmt->errorInfo(),
