@@ -7,12 +7,17 @@ class DBCore {
     	$pdoStmt = $pdo->prepare($sqlString);
     	$pdoStatus = $pdoStmt->execute($data);
 		$pdo = null;
+		if(DEFAULT_ERROR_LOG){
+			DefaultErrorLog::defaultLog('DB_Log_Query->'.$sqlString);
+			DefaultErrorLog::defaultLog($data);
+		}
 		if(DB_LOG){
 			ErrorLog::log('DB_Log_Query->'.$sqlString);
 			ErrorLog::log($data);
 		}
 		if(!$pdoStatus){
 			ErrorLog::log($pdoStmt->errorInfo());
+			DefaultErrorLog::defaultLog($pdoStmt->errorInfo());
 		}
     	return [
     		'status' => $pdoStatus ? 1: 0,
