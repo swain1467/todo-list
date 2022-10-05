@@ -1,0 +1,2 @@
+DROP TABLE task_label_mapping;
+DROP TABLE label_master;

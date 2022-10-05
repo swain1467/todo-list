@@ -124,3 +124,63 @@ DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FRO
 04-10-22 04:25:45::swain1467
 {"user_name":"swain1467","status":1}
 
+04-10-22 04:56:31::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+04-10-22 04:56:31::swain1467
+{"user_name":"swain1467","status":1}
+
+04-10-22 04:56:31::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+04-10-22 04:56:31::swain1467
+{"user_name":"swain1467","status":1}
+
+04-10-22 04:56:31::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on LIMIT 5 OFFSET 0
+
+04-10-22 04:56:31::swain1467
+{"user_name":"swain1467","status":1}
+
+04-10-22 04:56:35::swain1467
+DB_Log_Query->UPDATE task_master SET header = :header, content = :content, updated_on = :updated_on WHERE id = :id
+
+04-10-22 04:56:35::swain1467
+{"header":"To Do App","content":"Code refactoring in controller file \/api\/task.php","updated_on":"2022-10-04 16:56:34","id":"1"}
+
+04-10-22 04:56:35::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+04-10-22 04:56:35::swain1467
+{"user_name":"swain1467","status":1}
+
+04-10-22 04:56:35::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+04-10-22 04:56:35::swain1467
+{"user_name":"swain1467","status":1}
+
+04-10-22 04:56:35::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on LIMIT 5 OFFSET 0
+
+04-10-22 04:56:35::swain1467
+{"user_name":"swain1467","status":1}
+
+04-10-22 07:05:46::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+04-10-22 07:05:46::swain1467
+{"user_name":"swain1467","status":1}
+
+04-10-22 07:05:46::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+04-10-22 07:05:46::swain1467
+{"user_name":"swain1467","status":1}
+
+04-10-22 07:05:46::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on LIMIT 5 OFFSET 0
+
+04-10-22 07:05:46::swain1467
+{"user_name":"swain1467","status":1}
+

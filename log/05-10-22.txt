@@ -1,0 +1,3445 @@
+05-10-22 09:53:47::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 09:53:47::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 09:53:47::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 09:53:47::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 09:53:47::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on LIMIT 5 OFFSET 0
+
+05-10-22 09:53:47::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 10:18:21::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 10:18:21::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 10:18:21::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 10:18:21::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 10:18:21::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on LIMIT 5 OFFSET 0
+
+05-10-22 10:18:21::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 10:18:24::swain1467
+DB_Log_Query->UPDATE task_master SET header = :header, content = :content, updated_on = :updated_on WHERE id = :id
+
+05-10-22 10:18:24::swain1467
+{"header":"To Do App","content":"Code refactoring in controller file \/api\/task.php","updated_on":"2022-10-05 10:18:23","id":"1"}
+
+05-10-22 10:18:24::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 10:18:24::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 10:18:24::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 10:18:24::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 10:18:24::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on LIMIT 5 OFFSET 0
+
+05-10-22 10:18:24::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 11:05:57::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 11:05:57::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 11:05:57::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 11:05:57::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 11:05:57::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on LIMIT 5 OFFSET 0
+
+05-10-22 11:05:57::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 11:06:02::swain1467
+DB_Log_Query->UPDATE task_master SET header = :header, content = :content, updated_on = :updated_on WHERE id = :id
+
+05-10-22 11:06:02::swain1467
+{"header":"To Do App","content":"Code refactoring in controller file \/api\/task.php","updated_on":"2022-10-05 11:06:02","id":"1"}
+
+05-10-22 11:06:02::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 11:06:02::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 11:06:02::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 11:06:02::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 11:06:02::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on LIMIT 5 OFFSET 0
+
+05-10-22 11:06:02::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 11:21:15::
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:21:15::
+{"file_name":"create_table.txt"}
+
+05-10-22 11:21:15::
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:21:15::
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:21:15::
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:21:15::
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:22:08::
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:22:08::
+{"file_name":"create_table.txt"}
+
+05-10-22 11:22:08::
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:22:08::
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:22:08::
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:22:08::
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:22:20::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 11:22:20::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 11:22:20::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 11:22:20::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 11:22:20::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on LIMIT 5 OFFSET 0
+
+05-10-22 11:22:20::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 11:22:23::
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:22:23::
+{"file_name":"create_table.txt"}
+
+05-10-22 11:22:23::
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:22:23::
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:22:23::
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:22:23::
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:22:24::
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:22:24::
+{"file_name":"create_table.txt"}
+
+05-10-22 11:22:24::
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:22:24::
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:22:24::
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:22:24::
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:22:24::
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:22:24::
+{"file_name":"create_table.txt"}
+
+05-10-22 11:22:24::
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:22:24::
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:22:24::
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:22:24::
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:22:24::
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:22:24::
+{"file_name":"create_table.txt"}
+
+05-10-22 11:22:24::
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:22:24::
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:22:24::
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:22:24::
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:22:24::
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:22:24::
+{"file_name":"create_table.txt"}
+
+05-10-22 11:22:24::
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:22:24::
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:22:24::
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:22:24::
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:22:24::
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:22:24::
+{"file_name":"create_table.txt"}
+
+05-10-22 11:22:24::
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:22:24::
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:22:24::
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:22:24::
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:22:25::
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:22:25::
+{"file_name":"create_table.txt"}
+
+05-10-22 11:22:25::
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:22:25::
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:22:25::
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:22:25::
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:22:25::
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:22:25::
+{"file_name":"create_table.txt"}
+
+05-10-22 11:22:25::
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:22:25::
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:22:25::
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:22:25::
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:22:25::
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:22:25::
+{"file_name":"create_table.txt"}
+
+05-10-22 11:22:25::
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:22:25::
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:22:25::
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:22:25::
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:22:25::
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:22:25::
+{"file_name":"create_table.txt"}
+
+05-10-22 11:22:25::
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:22:25::
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:22:25::
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:22:25::
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:23:33::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:23:33::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:23:33::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:23:33::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:23:33::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:23:33::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:24:45::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:24:45::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:24:45::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:24:45::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:24:45::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:24:45::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:25:55::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:25:55::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:25:55::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:25:55::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:25:55::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:25:55::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:26:06::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:26:06::swain1467
+{"file_name":null}
+
+05-10-22 11:26:06::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:26:06::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:26:06::swain1467
+{"file_name":null}
+
+05-10-22 11:26:06::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:26:12::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:26:12::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:26:12::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:26:12::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:26:12::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:26:12::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:26:46::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:26:46::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:26:46::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:26:46::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:26:46::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:26:46::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:26:46::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:26:46::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:26:46::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:26:46::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:26:46::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:26:46::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:26:46::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:26:46::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:26:46::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:26:46::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:26:46::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:26:46::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:26:47::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:26:47::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:26:47::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:26:47::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:26:47::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:26:47::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:26:47::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:26:47::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:26:47::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:26:47::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:26:47::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:26:47::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:26:47::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:26:47::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:26:47::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:26:47::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:26:47::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:26:47::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:26:47::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:26:47::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:26:47::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:26:47::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:26:47::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:26:47::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:26:48::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:26:48::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:26:48::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:26:48::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:26:48::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:26:48::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:26:48::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:26:48::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:26:48::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:26:48::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:26:48::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:26:48::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:26:48::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:26:48::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:26:48::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:26:48::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:26:48::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:26:48::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:26:48::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:26:48::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:26:48::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:26:48::swain1467
+DB_Log_Query->INSERT INTO task_master (file_name) VALUES (:file_name)
+
+05-10-22 11:26:48::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:26:48::swain1467
+["42S22",1054,"Unknown column 'file_name' in 'field list'"]
+
+05-10-22 11:28:30::swain1467
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 11:28:30::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:28:30::swain1467
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 11:28:30::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:32:49::swain1467
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 11:32:49::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:32:49::swain1467
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 11:32:49::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:32:51::swain1467
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 11:32:51::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:32:52::swain1467
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 11:32:52::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:43:13::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:43:13::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:43:13::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:43:13::swain1467
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 11:43:13::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:43:13::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:43:13::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:43:13::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:43:13::swain1467
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 11:43:13::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:43:23::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:43:23::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:43:23::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:43:24::swain1467
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 11:43:24::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:43:24::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:43:24::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:43:24::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:43:25::swain1467
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 11:43:25::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:43:25::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:43:25::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:43:25::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:43:25::swain1467
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 11:43:25::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:43:25::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:43:25::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:43:25::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:43:26::swain1467
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 11:43:26::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:44:08::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:08::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:44:08::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:08::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:08::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:44:08::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:25::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:25::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:44:25::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:25::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:25::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:44:25::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:35::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:35::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:44:35::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:35::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:35::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:44:35::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:36::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:36::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:44:36::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:36::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:36::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:44:36::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:36::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:36::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:44:36::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:36::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:36::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:44:36::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:36::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:36::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:44:36::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:36::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:36::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:44:36::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:36::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:36::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:44:36::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:36::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:36::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:44:36::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:36::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:36::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:44:36::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:36::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:36::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:44:36::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:37::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:37::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:44:37::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:37::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:37::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:44:37::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:37::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:37::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:44:37::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:37::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:37::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:44:37::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:37::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:37::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:44:37::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:37::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:37::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:44:37::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:40::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:40::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:44:40::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:40::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:40::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:44:40::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:40::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:40::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:44:40::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:40::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:40::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:44:40::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:41::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:41::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:44:41::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:41::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:41::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:44:41::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:41::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:41::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:44:41::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:41::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:41::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:44:41::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:41::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:41::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:44:41::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:41::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:41::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:44:41::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:41::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:41::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:44:41::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:41::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY created_on LIMIT 1 OFFSET 0
+
+05-10-22 11:44:41::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:44:41::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:54::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:44:54::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:44:54::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:54::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:44:54::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:44:54::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:55::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:44:55::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:44:55::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:55::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:44:55::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:44:55::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:55::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:44:55::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:44:55::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:55::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:44:55::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:44:55::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:56::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:44:56::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:44:56::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:56::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:44:56::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:44:56::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:56::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:44:56::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:44:56::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:56::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:44:56::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:44:56::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:56::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:44:56::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:44:56::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:56::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:44:56::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:44:56::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:56::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:44:56::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:44:56::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:56::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:44:56::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:44:56::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:56::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:44:56::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:44:56::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:44:56::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:44:56::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:44:56::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:45:45::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:45:45::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:45:45::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:45:45::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:45:45::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:45:45::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:45:46::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:45:46::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:45:46::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:45:46::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:45:46::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:45:46::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:45:46::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:45:46::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:45:46::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:45:46::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:45:46::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:45:46::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:45:46::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:45:46::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:45:46::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:45:46::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:45:46::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:45:46::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:45:46::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:45:46::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:45:46::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:45:46::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:45:46::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:45:46::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:45:46::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:45:46::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:45:46::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:45:46::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:45:46::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:45:46::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:46:49::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:46:49::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:46:49::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:46:49::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:46:49::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:46:49::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:47:06::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:47:06::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:47:06::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:47:06::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:47:06::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:47:06::swain1467
+["42S22",1054,"Unknown column 'header' in 'field list'"]
+
+05-10-22 11:47:30::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:47:30::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:47:30::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:47:30::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:47:40::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:47:40::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:47:40::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:47:40::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:47:41::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:47:41::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:47:41::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:47:41::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:48:32::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:48:32::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:48:32::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:48:32::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:48:49::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:48:49::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:48:49::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:48:49::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:48:58::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:48:58::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:48:58::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:48:58::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:48:59::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:48:59::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:48:59::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:48:59::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:48:59::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:48:59::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:48:59::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:48:59::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:48:59::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:48:59::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:48:59::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:48:59::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:49:00::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:49:00::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:49:00::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:49:00::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:49:00::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:49:00::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:49:00::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:49:00::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:49:00::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:49:00::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:49:00::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:49:00::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:49:00::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:49:00::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:49:00::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:49:00::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:49:00::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:49:00::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:49:00::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:49:00::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:49:00::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:49:00::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:49:00::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:49:00::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:50:28::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:50:28::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:50:28::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:50:28::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:50:28::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:50:28::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:50:28::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:50:28::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:50:28::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:50:28::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:50:28::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:50:28::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:50:28::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:50:28::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:50:28::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:50:28::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:50:28::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:50:28::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:50:28::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:50:28::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:50:29::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:50:29::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:50:29::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:50:29::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:50:29::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:50:29::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:50:29::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:50:29::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:50:29::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:50:29::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:50:29::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:50:29::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:50:29::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:50:29::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:50:29::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:50:29::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:50:29::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:50:29::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:50:29::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:50:29::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:50:29::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:50:29::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:50:29::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:50:29::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 11:50:30::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:50:30::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 11:50:30::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 11:50:30::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 12:23:00::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 12:23:00::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 12:23:00::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 12:23:00::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 12:23:00::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on LIMIT 5 OFFSET 0
+
+05-10-22 12:23:00::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 12:27:20::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 12:27:20::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 12:27:20::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 12:27:20::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 12:27:20::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on LIMIT 5 OFFSET 0
+
+05-10-22 12:27:20::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 12:42:31::Debasish
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 12:42:31::Debasish
+{"user_name":"Debasish","status":1}
+
+05-10-22 12:42:31::Debasish
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 12:42:31::Debasish
+{"user_name":"Debasish","status":1}
+
+05-10-22 12:42:31::Debasish
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on LIMIT 5 OFFSET 0
+
+05-10-22 12:42:31::Debasish
+{"user_name":"Debasish","status":1}
+
+05-10-22 12:42:53::Debasish
+DB_Log_Query->INSERT INTO task_master (header, content, created_on, created_by, updated_on, status) VALUES (:header, :content, :created_on, :created_by, :updated_on, :status)
+
+05-10-22 12:42:53::Debasish
+{"header":"PHP","content":"db migration","created_on":"2022-10-05 12:42:53","created_by":"Debasish","updated_on":"2022-10-05 12:42:53","status":1}
+
+05-10-22 12:42:53::Debasish
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 12:42:53::Debasish
+{"user_name":"Debasish","status":1}
+
+05-10-22 12:42:53::Debasish
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 12:42:53::Debasish
+{"user_name":"Debasish","status":1}
+
+05-10-22 12:42:53::Debasish
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on LIMIT 5 OFFSET 0
+
+05-10-22 12:42:53::Debasish
+{"user_name":"Debasish","status":1}
+
+05-10-22 12:43:04::Debasish
+DB_Log_Query->UPDATE task_master SET header = :header, content = :content, updated_on = :updated_on WHERE id = :id
+
+05-10-22 12:43:04::Debasish
+{"header":"PHP","content":"db migration h","updated_on":"2022-10-05 12:43:03","id":"9"}
+
+05-10-22 12:43:04::Debasish
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 12:43:04::Debasish
+{"user_name":"Debasish","status":1}
+
+05-10-22 12:43:04::Debasish
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 12:43:04::Debasish
+{"user_name":"Debasish","status":1}
+
+05-10-22 12:43:04::Debasish
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on LIMIT 5 OFFSET 0
+
+05-10-22 12:43:04::Debasish
+{"user_name":"Debasish","status":1}
+
+05-10-22 12:43:21::Debasish
+DB_Log_Query->UPDATE task_master SET updated_on = :updated_on, status = :status WHERE id = :id
+
+05-10-22 12:43:21::Debasish
+{"updated_on":"2022-10-05 12:43:19","status":0,"id":"9"}
+
+05-10-22 12:43:21::Debasish
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 12:43:21::Debasish
+{"user_name":"Debasish","status":1}
+
+05-10-22 12:43:21::Debasish
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 12:43:21::Debasish
+{"user_name":"Debasish","status":1}
+
+05-10-22 12:43:21::Debasish
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on LIMIT 5 OFFSET 0
+
+05-10-22 12:43:21::Debasish
+{"user_name":"Debasish","status":1}
+
+05-10-22 12:46:25::Debasish
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 12:46:25::Debasish
+{"user_name":"Debasish","status":1}
+
+05-10-22 12:46:25::Debasish
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 12:46:25::Debasish
+{"user_name":"Debasish","status":1}
+
+05-10-22 12:46:25::Debasish
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on LIMIT 5 OFFSET 0
+
+05-10-22 12:46:25::Debasish
+{"user_name":"Debasish","status":1}
+
+05-10-22 12:46:31::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 12:46:31::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 12:46:31::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 12:46:31::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 12:46:31::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on LIMIT 5 OFFSET 0
+
+05-10-22 12:46:31::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 12:46:33::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 12:46:33::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 12:46:33::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 12:46:33::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 12:46:33::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on LIMIT 5 OFFSET 0
+
+05-10-22 12:46:33::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 01:17:26::
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:17:26::
+{"file_name":"migration.php"}
+
+05-10-22 01:17:28::
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 01:17:28::
+{"file_name":"migration.php"}
+
+05-10-22 01:17:28::
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:17:28::
+{"file_name":"config.php"}
+
+05-10-22 01:17:28::
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 01:17:28::
+{"file_name":"config.php"}
+
+05-10-22 01:17:28::
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:17:28::
+{"file_name":"db_migration"}
+
+05-10-22 01:17:29::
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 01:17:29::
+{"file_name":"db_migration"}
+
+05-10-22 01:17:29::
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:17:29::
+{"file_name":"log"}
+
+05-10-22 01:17:30::
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 01:17:30::
+{"file_name":"log"}
+
+05-10-22 01:17:30::
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:17:30::
+{"file_name":"assignment12092022.sql"}
+
+05-10-22 01:17:30::
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 01:17:30::
+{"file_name":"assignment12092022.sql"}
+
+05-10-22 01:17:30::
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:17:30::
+{"file_name":"user_dashboard.php"}
+
+05-10-22 01:17:30::
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 01:17:30::
+{"file_name":"user_dashboard.php"}
+
+05-10-22 01:17:30::
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:17:30::
+{"file_name":"index.php"}
+
+05-10-22 01:17:30::
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 01:17:30::
+{"file_name":"index.php"}
+
+05-10-22 01:17:30::
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:17:30::
+{"file_name":"login.php"}
+
+05-10-22 01:17:30::
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 01:17:30::
+{"file_name":"login.php"}
+
+05-10-22 01:17:30::
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:17:30::
+{"file_name":"signup.php"}
+
+05-10-22 01:17:30::
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 01:17:30::
+{"file_name":"signup.php"}
+
+05-10-22 01:17:30::
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:17:30::
+{"file_name":"logout.php"}
+
+05-10-22 01:17:30::
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 01:17:30::
+{"file_name":"logout.php"}
+
+05-10-22 01:17:30::
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:17:30::
+{"file_name":"utility"}
+
+05-10-22 01:17:30::
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 01:17:30::
+{"file_name":"utility"}
+
+05-10-22 01:17:30::
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:17:30::
+{"file_name":"api"}
+
+05-10-22 01:17:30::
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 01:17:30::
+{"file_name":"api"}
+
+05-10-22 01:17:30::
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:17:30::
+{"file_name":"libs"}
+
+05-10-22 01:17:30::
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 01:17:30::
+{"file_name":"libs"}
+
+05-10-22 01:17:30::
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:17:30::
+{"file_name":"asset"}
+
+05-10-22 01:17:30::
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 01:17:30::
+{"file_name":"asset"}
+
+05-10-22 01:18:30::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:18:30::swain1467
+{"file_name":"migration.php"}
+
+05-10-22 01:18:30::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:18:30::swain1467
+{"file_name":"config.php"}
+
+05-10-22 01:18:30::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:18:30::swain1467
+{"file_name":"db_migration"}
+
+05-10-22 01:18:30::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:18:30::swain1467
+{"file_name":"log"}
+
+05-10-22 01:18:30::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:18:30::swain1467
+{"file_name":"assignment12092022.sql"}
+
+05-10-22 01:18:30::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:18:30::swain1467
+{"file_name":"user_dashboard.php"}
+
+05-10-22 01:18:30::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:18:30::swain1467
+{"file_name":"index.php"}
+
+05-10-22 01:18:30::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:18:30::swain1467
+{"file_name":"login.php"}
+
+05-10-22 01:18:30::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:18:30::swain1467
+{"file_name":"signup.php"}
+
+05-10-22 01:18:30::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:18:30::swain1467
+{"file_name":"logout.php"}
+
+05-10-22 01:18:30::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:18:30::swain1467
+{"file_name":"utility"}
+
+05-10-22 01:18:30::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:18:30::swain1467
+{"file_name":"api"}
+
+05-10-22 01:18:30::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:18:30::swain1467
+{"file_name":"libs"}
+
+05-10-22 01:18:30::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:18:30::swain1467
+{"file_name":"asset"}
+
+05-10-22 01:19:09::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:19:09::swain1467
+{"file_name":"migration.php"}
+
+05-10-22 01:19:09::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:19:09::swain1467
+{"file_name":"config.php"}
+
+05-10-22 01:19:09::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:19:09::swain1467
+{"file_name":"db_migration"}
+
+05-10-22 01:19:09::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:19:09::swain1467
+{"file_name":"log"}
+
+05-10-22 01:19:09::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:19:09::swain1467
+{"file_name":"assignment12092022.sql"}
+
+05-10-22 01:19:09::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:19:09::swain1467
+{"file_name":"user_dashboard.php"}
+
+05-10-22 01:19:09::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:19:09::swain1467
+{"file_name":"index.php"}
+
+05-10-22 01:19:09::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:19:09::swain1467
+{"file_name":"login.php"}
+
+05-10-22 01:19:09::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:19:09::swain1467
+{"file_name":"signup.php"}
+
+05-10-22 01:19:09::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:19:09::swain1467
+{"file_name":"logout.php"}
+
+05-10-22 01:19:09::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:19:09::swain1467
+{"file_name":"utility"}
+
+05-10-22 01:19:09::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:19:09::swain1467
+{"file_name":"api"}
+
+05-10-22 01:19:09::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:19:09::swain1467
+{"file_name":"libs"}
+
+05-10-22 01:19:09::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:19:09::swain1467
+{"file_name":"asset"}
+
+05-10-22 01:19:26::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:19:26::swain1467
+{"file_name":"\/var\/www\/html\/subhendu_todo_list_com\/db_migration\/create_table.txt"}
+
+05-10-22 01:19:27::swain1467
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 01:19:27::swain1467
+{"file_name":"\/var\/www\/html\/subhendu_todo_list_com\/db_migration\/create_table.txt"}
+
+05-10-22 01:19:27::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:19:27::swain1467
+{"file_name":"\/var\/www\/html\/subhendu_todo_list_com\/db_migration\/drop_table.txt"}
+
+05-10-22 01:19:27::swain1467
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 01:19:27::swain1467
+{"file_name":"\/var\/www\/html\/subhendu_todo_list_com\/db_migration\/drop_table.txt"}
+
+05-10-22 01:19:53::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:19:53::swain1467
+{"file_name":"db_migration\/create_table.txt"}
+
+05-10-22 01:19:54::swain1467
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 01:19:54::swain1467
+{"file_name":"db_migration\/create_table.txt"}
+
+05-10-22 01:19:54::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:19:54::swain1467
+{"file_name":"db_migration\/drop_table.txt"}
+
+05-10-22 01:19:55::swain1467
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 01:19:55::swain1467
+{"file_name":"db_migration\/drop_table.txt"}
+
+05-10-22 01:20:49::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:20:49::swain1467
+{"file_name":"db_migration\/create_table.txt"}
+
+05-10-22 01:20:49::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:20:49::swain1467
+{"file_name":"db_migration\/drop_table.txt"}
+
+05-10-22 01:21:02::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:21:02::swain1467
+{"file_name":"db_migration\/create_table.txt"}
+
+05-10-22 01:21:02::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:21:02::swain1467
+{"file_name":"db_migration\/drop_table.txt"}
+
+05-10-22 01:21:19::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:21:19::swain1467
+{"file_name":"db_migration\/create_table.txt"}
+
+05-10-22 01:21:19::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:21:19::swain1467
+{"file_name":"db_migration\/drop_table.txt"}
+
+05-10-22 01:21:20::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:21:20::swain1467
+{"file_name":"db_migration\/create_table.txt"}
+
+05-10-22 01:21:20::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 01:21:20::swain1467
+{"file_name":"db_migration\/drop_table.txt"}
+
+05-10-22 03:24:37::
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:24:37::
+{"file_name":"create_table.txt"}
+
+05-10-22 03:24:38::
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 03:24:38::
+{"file_name":"create_table.txt"}
+
+05-10-22 03:24:38::
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:24:38::
+{"file_name":"drop_table.txt"}
+
+05-10-22 03:24:38::
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 03:24:38::
+{"file_name":"drop_table.txt"}
+
+05-10-22 03:25:15::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 03:25:15::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 03:25:15::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 03:25:15::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 03:25:15::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on LIMIT 5 OFFSET 0
+
+05-10-22 03:25:15::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 03:25:17::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:25:17::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 03:25:17::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:25:17::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 03:27:02::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:27:02::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 03:27:02::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:27:02::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 03:28:29::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:28:29::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 03:28:30::swain1467
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 03:28:30::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 03:28:30::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:28:30::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 03:28:33::swain1467
+DB_Log_Query->INSERT INTO db_migration (file_name) VALUES (:file_name)
+
+05-10-22 03:28:33::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 03:43:11::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:43:11::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 03:43:11::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:43:11::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 03:43:11::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name AND status = :status ORDER BY id LIMIT 1 OFFSET 0
+
+05-10-22 03:43:11::swain1467
+{"file_name":null,"status":0}
+
+05-10-22 03:43:44::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:43:44::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 03:43:44::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:43:44::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 03:43:44::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id LIMIT 1 OFFSET 0
+
+05-10-22 03:43:44::swain1467
+{"status":0}
+
+05-10-22 03:46:25::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:46:25::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 03:46:25::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:46:25::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 03:46:25::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id LIMIT 1 OFFSET 0
+
+05-10-22 03:46:25::swain1467
+{"status":0}
+
+05-10-22 03:46:33::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:46:33::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 03:46:33::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:46:33::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 03:46:33::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id LIMIT 1 OFFSET 0
+
+05-10-22 03:46:33::swain1467
+{"status":0}
+
+05-10-22 03:46:34::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:46:34::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 03:46:34::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:46:34::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 03:46:34::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id LIMIT 1 OFFSET 0
+
+05-10-22 03:46:34::swain1467
+{"status":0}
+
+05-10-22 03:46:34::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:46:34::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 03:46:34::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:46:34::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 03:46:34::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id LIMIT 1 OFFSET 0
+
+05-10-22 03:46:34::swain1467
+{"status":0}
+
+05-10-22 03:46:34::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:46:34::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 03:46:34::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:46:34::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 03:46:34::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id LIMIT 1 OFFSET 0
+
+05-10-22 03:46:34::swain1467
+{"status":0}
+
+05-10-22 03:46:34::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:46:34::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 03:46:34::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:46:34::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 03:46:34::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id LIMIT 1 OFFSET 0
+
+05-10-22 03:46:34::swain1467
+{"status":0}
+
+05-10-22 03:46:34::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:46:34::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 03:46:34::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:46:34::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 03:46:34::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id LIMIT 1 OFFSET 0
+
+05-10-22 03:46:34::swain1467
+{"status":0}
+
+05-10-22 03:46:50::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:46:50::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 03:46:50::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:46:50::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 03:46:50::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id LIMIT 1 OFFSET 0
+
+05-10-22 03:46:50::swain1467
+{"status":0}
+
+05-10-22 03:47:59::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:47:59::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 03:47:59::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:47:59::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 03:47:59::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id LIMIT 1 OFFSET 0
+
+05-10-22 03:47:59::swain1467
+{"status":0}
+
+05-10-22 03:48:31::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:48:31::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 03:48:31::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:48:31::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 03:48:31::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 03:48:31::swain1467
+{"status":0}
+
+05-10-22 03:48:41::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:48:41::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 03:48:41::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:48:41::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 03:48:41::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 03:48:41::swain1467
+{"status":0}
+
+05-10-22 03:48:56::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:48:56::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 03:48:56::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:48:56::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 03:48:56::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 03:48:56::swain1467
+{"status":0}
+
+05-10-22 03:49:46::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:49:46::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 03:49:46::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:49:46::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 03:51:31::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:51:31::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 03:51:31::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:51:31::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 03:51:31::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 03:51:31::swain1467
+{"status":0}
+
+05-10-22 03:51:46::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:51:46::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 03:51:46::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:51:46::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 03:51:46::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 03:51:46::swain1467
+{"status":0}
+
+05-10-22 03:52:16::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:52:16::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 03:52:16::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:52:16::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 03:52:16::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 03:52:16::swain1467
+{"status":0}
+
+05-10-22 03:53:14::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:53:14::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 03:53:14::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:53:14::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 03:53:14::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 03:53:14::swain1467
+{"status":0}
+
+05-10-22 03:53:31::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:53:31::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 03:53:31::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:53:31::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 03:53:31::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 03:53:31::swain1467
+{"status":0}
+
+05-10-22 03:55:42::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:55:42::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 03:55:42::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 03:55:42::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 03:55:42::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 03:55:42::swain1467
+{"status":0}
+
+05-10-22 04:01:45::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:01:45::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 04:01:45::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:01:45::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 04:01:45::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 04:01:45::swain1467
+{"status":0}
+
+05-10-22 04:02:43::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:02:43::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 04:02:43::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:02:43::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 04:02:43::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 04:02:43::swain1467
+{"status":0}
+
+05-10-22 04:03:06::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:03:06::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 04:03:06::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:03:06::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 04:03:06::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 04:03:06::swain1467
+{"status":0}
+
+05-10-22 04:03:23::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:03:23::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 04:03:23::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:03:23::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 04:03:23::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 04:03:23::swain1467
+{"status":0}
+
+05-10-22 04:06:45::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:06:45::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 04:06:45::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:06:45::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 04:06:45::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 04:06:45::swain1467
+{"status":0}
+
+05-10-22 04:10:21::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:10:21::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 04:10:21::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:10:21::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 04:10:21::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 04:10:21::swain1467
+{"status":0}
+
+05-10-22 04:12:24::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:12:24::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 04:12:24::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:12:24::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 04:12:24::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 04:12:24::swain1467
+{"status":0}
+
+05-10-22 04:16:57::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:16:57::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 04:16:57::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:16:57::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 04:16:57::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 04:16:57::swain1467
+{"status":0}
+
+05-10-22 04:19:10::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:19:10::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 04:19:10::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:19:10::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 04:19:10::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 04:19:10::swain1467
+{"status":0}
+
+05-10-22 04:20:02::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:20:02::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 04:20:02::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:20:02::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 04:20:02::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 04:20:02::swain1467
+{"status":0}
+
+05-10-22 04:20:32::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:20:32::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 04:20:32::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:20:32::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 04:20:32::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 04:20:32::swain1467
+{"status":0}
+
+05-10-22 04:21:56::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:21:56::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 04:21:56::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:21:56::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 04:21:56::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 04:21:56::swain1467
+{"status":0}
+
+05-10-22 04:24:25::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:24:25::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 04:24:25::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:24:25::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 04:24:25::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 04:24:25::swain1467
+{"status":0}
+
+05-10-22 04:24:46::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:24:46::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 04:24:46::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:24:46::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 04:24:46::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 04:24:46::swain1467
+{"status":0}
+
+05-10-22 04:25:26::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:25:26::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 04:25:26::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:25:26::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 04:25:26::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 04:25:26::swain1467
+{"status":0}
+
+05-10-22 04:25:57::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:25:57::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 04:25:57::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:25:57::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 04:25:57::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 04:25:57::swain1467
+{"status":0}
+
+05-10-22 04:26:23::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:26:23::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 04:26:23::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:26:23::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 04:26:23::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 04:26:23::swain1467
+{"status":0}
+
+05-10-22 04:38:24::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:38:24::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 04:38:24::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:38:24::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 04:38:24::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 04:38:24::swain1467
+{"status":0}
+
+05-10-22 04:38:26::swain1467
+DB_Log_Query->CREATE TABLE label_master(
+id INT AUTO_INCREMENT PRIMARY KEY,
+label VARCHAR(100) NOT NULL,
+created_on datetime,
+created_by VARCHAR(200) NOT NULL,
+updated_on datetime,
+status INT
+);
+
+CREATE TABLE task_label_mapping(
+id INT AUTO_INCREMENT PRIMARY KEY,
+task_id INT NOT NULL,
+label_id INT NOT NULL,
+created_on datetime,
+created_by VARCHAR(200) NOT NULL,
+updated_on datetime,
+status INT,
+FOREIGN KEY (task_id)
+    REFERENCES task_master(id)
+    ON UPDATE CASCADE ON DELETE RESTRICT,
+FOREIGN KEY (label_id)
+    REFERENCES label_master(id)
+    ON UPDATE CASCADE ON DELETE RESTRICT
+);
+
+05-10-22 04:38:26::swain1467
+[]
+
+05-10-22 04:39:24::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:39:24::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 04:39:24::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:39:24::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 04:39:24::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 04:39:24::swain1467
+{"status":0}
+
+05-10-22 04:39:24::swain1467
+DB_Log_Query->CREATE TABLE label_master(
+id INT AUTO_INCREMENT PRIMARY KEY,
+label VARCHAR(100) NOT NULL,
+created_on datetime,
+created_by VARCHAR(200) NOT NULL,
+updated_on datetime,
+status INT
+);
+
+CREATE TABLE task_label_mapping(
+id INT AUTO_INCREMENT PRIMARY KEY,
+task_id INT NOT NULL,
+label_id INT NOT NULL,
+created_on datetime,
+created_by VARCHAR(200) NOT NULL,
+updated_on datetime,
+status INT,
+FOREIGN KEY (task_id)
+    REFERENCES task_master(id)
+    ON UPDATE CASCADE ON DELETE RESTRICT,
+FOREIGN KEY (label_id)
+    REFERENCES label_master(id)
+    ON UPDATE CASCADE ON DELETE RESTRICT
+);
+
+05-10-22 04:39:24::swain1467
+[]
+
+05-10-22 04:39:24::swain1467
+["42S01",1050,"Table 'label_master' already exists"]
+
+05-10-22 04:42:46::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:42:46::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 04:42:46::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:42:46::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 04:42:46::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 04:42:46::swain1467
+{"status":0}
+
+05-10-22 04:43:43::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:43:43::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 04:43:43::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:43:43::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 04:43:43::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 04:43:43::swain1467
+{"status":0}
+
+05-10-22 04:43:49::swain1467
+DB_Log_Query->CREATE TABLE label_master(
+id INT AUTO_INCREMENT PRIMARY KEY,
+label VARCHAR(100) NOT NULL,
+created_on datetime,
+created_by VARCHAR(200) NOT NULL,
+updated_on datetime,
+status INT
+);
+
+CREATE TABLE task_label_mapping(
+id INT AUTO_INCREMENT PRIMARY KEY,
+task_id INT NOT NULL,
+label_id INT NOT NULL,
+created_on datetime,
+created_by VARCHAR(200) NOT NULL,
+updated_on datetime,
+status INT,
+FOREIGN KEY (task_id)
+    REFERENCES task_master(id)
+    ON UPDATE CASCADE ON DELETE RESTRICT,
+FOREIGN KEY (label_id)
+    REFERENCES label_master(id)
+    ON UPDATE CASCADE ON DELETE RESTRICT
+);
+
+05-10-22 04:43:49::swain1467
+
+
+05-10-22 04:45:36::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:45:36::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 04:45:36::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:45:36::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 04:45:36::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 04:45:36::swain1467
+{"status":0}
+
+05-10-22 04:45:37::swain1467
+DB_Log_Query->CREATE TABLE label_master(
+id INT AUTO_INCREMENT PRIMARY KEY,
+label VARCHAR(100) NOT NULL,
+created_on datetime,
+created_by VARCHAR(200) NOT NULL,
+updated_on datetime,
+status INT
+);
+
+CREATE TABLE task_label_mapping(
+id INT AUTO_INCREMENT PRIMARY KEY,
+task_id INT NOT NULL,
+label_id INT NOT NULL,
+created_on datetime,
+created_by VARCHAR(200) NOT NULL,
+updated_on datetime,
+status INT,
+FOREIGN KEY (task_id)
+    REFERENCES task_master(id)
+    ON UPDATE CASCADE ON DELETE RESTRICT,
+FOREIGN KEY (label_id)
+    REFERENCES label_master(id)
+    ON UPDATE CASCADE ON DELETE RESTRICT
+);
+
+05-10-22 04:45:37::swain1467
+
+
+05-10-22 04:45:47::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:45:47::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 04:45:47::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 04:45:47::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 04:45:47::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 04:45:47::swain1467
+{"status":0}
+
+05-10-22 04:45:47::swain1467
+DB_Log_Query->CREATE TABLE label_master(
+id INT AUTO_INCREMENT PRIMARY KEY,
+label VARCHAR(100) NOT NULL,
+created_on datetime,
+created_by VARCHAR(200) NOT NULL,
+updated_on datetime,
+status INT
+);
+
+CREATE TABLE task_label_mapping(
+id INT AUTO_INCREMENT PRIMARY KEY,
+task_id INT NOT NULL,
+label_id INT NOT NULL,
+created_on datetime,
+created_by VARCHAR(200) NOT NULL,
+updated_on datetime,
+status INT,
+FOREIGN KEY (task_id)
+    REFERENCES task_master(id)
+    ON UPDATE CASCADE ON DELETE RESTRICT,
+FOREIGN KEY (label_id)
+    REFERENCES label_master(id)
+    ON UPDATE CASCADE ON DELETE RESTRICT
+);
+
+05-10-22 04:45:47::swain1467
+
+
+05-10-22 04:45:47::swain1467
+["42S01",1050,"Table 'label_master' already exists"]
+
+05-10-22 05:11:50::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 05:11:50::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 05:11:50::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 05:11:50::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 05:11:50::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 05:11:50::swain1467
+{"status":0}
+
+05-10-22 05:11:52::swain1467
+DB_Log_Query->CREATE TABLE label_master(
+id INT AUTO_INCREMENT PRIMARY KEY,
+label VARCHAR(100) NOT NULL,
+created_on datetime,
+created_by VARCHAR(200) NOT NULL,
+updated_on datetime,
+status INT
+);
+
+CREATE TABLE task_label_mapping(
+id INT AUTO_INCREMENT PRIMARY KEY,
+task_id INT NOT NULL,
+label_id INT NOT NULL,
+created_on datetime,
+created_by VARCHAR(200) NOT NULL,
+updated_on datetime,
+status INT,
+FOREIGN KEY (task_id)
+    REFERENCES task_master(id)
+    ON UPDATE CASCADE ON DELETE RESTRICT,
+FOREIGN KEY (label_id)
+    REFERENCES label_master(id)
+    ON UPDATE CASCADE ON DELETE RESTRICT
+);
+
+05-10-22 05:11:52::swain1467
+
+
+05-10-22 05:11:53::swain1467
+DB_Log_Query->UPDATE db_migration SET status = :status WHERE file_name = :file_name
+
+05-10-22 05:11:53::swain1467
+{"status":1,"file_name":"create_table.txt"}
+
+05-10-22 05:11:54::swain1467
+DB_Log_Query->DROP TABLE task_label_mapping;
+DROP TABLE label_master;
+
+05-10-22 05:11:54::swain1467
+
+
+05-10-22 05:11:54::swain1467
+DB_Log_Query->UPDATE db_migration SET status = :status WHERE file_name = :file_name
+
+05-10-22 05:11:54::swain1467
+{"status":1,"file_name":"drop_table.txt"}
+
+05-10-22 05:12:17::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 05:12:17::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 05:12:17::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 05:12:17::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 05:12:17::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 05:12:17::swain1467
+{"status":0}
+
+05-10-22 05:12:22::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 05:12:22::swain1467
+{"file_name":"create_table.txt"}
+
+05-10-22 05:12:22::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 05:12:22::swain1467
+{"file_name":"drop_table.txt"}
+
+05-10-22 05:12:22::swain1467
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 05:12:22::swain1467
+{"status":0}
+
+05-10-22 05:30:33::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 05:30:33::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 05:30:33::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on
+
+05-10-22 05:30:33::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 05:30:33::swain1467
+DB_Log_Query->SELECT id, CONCAT(header,":",content) as task, header, content FROM task_master WHERE created_by = :user_name AND status = :status ORDER BY created_on LIMIT 5 OFFSET 0
+
+05-10-22 05:30:33::swain1467
+{"user_name":"swain1467","status":1}
+
+05-10-22 05:30:37::
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 05:30:37::
+{"file_name":"create_table.txt"}
+
+05-10-22 05:30:37::
+DB_Log_Query->SELECT file_name FROM db_migration WHERE file_name = :file_name ORDER BY file_name LIMIT 1 OFFSET 0
+
+05-10-22 05:30:37::
+{"file_name":"drop_table.txt"}
+
+05-10-22 05:30:37::
+DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY id
+
+05-10-22 05:30:37::
+{"status":0}
+

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 04, 2022 at 04:29 PM
+-- Generation Time: Oct 05, 2022 at 05:34 PM
 -- Server version: 8.0.30-0ubuntu0.20.04.2
 -- PHP Version: 7.4.3
 
@@ -25,13 +25,25 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `db_migration`
+--
+
+CREATE TABLE `db_migration` (
+  `id` int NOT NULL,
+  `file_name` varchar(100) NOT NULL,
+  `status` tinyint DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `task_master`
 --
 
 CREATE TABLE `task_master` (
   `id` int NOT NULL,
   `header` varchar(100) NOT NULL,
-  `content` varchar(500) NOT NULL,
+  `content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `created_on` datetime DEFAULT NULL,
   `created_by` varchar(200) NOT NULL,
   `updated_on` datetime DEFAULT NULL,
@@ -62,6 +74,12 @@ CREATE TABLE `user_details` (
 --
 
 --
+-- Indexes for table `db_migration`
+--
+ALTER TABLE `db_migration`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `task_master`
 --
 ALTER TABLE `task_master`
@@ -76,6 +94,12 @@ ALTER TABLE `user_details`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `db_migration`
+--
+ALTER TABLE `db_migration`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `task_master`

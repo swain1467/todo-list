@@ -1,5 +1,5 @@
 <?php
-require_once(ROOT_DIR."utility/file_include.php");
+require_once(UTILITY_DIR."file_include.php");
 require_once(LIB_DIR."db/db_connection.php");
 class DBCore {
 	public static function executeQuery($sqlString, $data) {

@@ -27,11 +27,13 @@ class ErrorLog{
         }
     }
 }
+
 class DefaultErrorLog{
     public static function defaultLog($content){
+
         if(is_array($content))
         {
-            $content = arrayToStr($content);
+            $content = print_r($content, true);
         }
         error_log($content."\n",0);
     }
