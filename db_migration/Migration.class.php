@@ -1,8 +1,9 @@
 <?php
-session_start();
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 require_once(LIB_DIR."/db/query_builder.php");
 require_once(LIB_DIR."/db/DBCore.class.php");
-
 class MigrationClass{
     public static function insertFiles($items){
         array_multisort(array_map('filemtime', $items), SORT_NUMERIC, SORT_DESC, $items);
@@ -44,8 +45,27 @@ class MigrationClass{
     }
     public static function executeSql($sql_statement){
         $data = null;
-        $result = DBCore::executeQuery($sql_statement,$data);
-        return $result['status'];
+        $all_statement = array();
+        $all_statement = explode(";",$sql_statement);
+        $ex_status_count = 0;
+        $pdo = pdo_connect();
+        $pdo->beginTransaction();
+        for($count=0; $count<count($all_statement); $count++){
+            $result = DBCore::executeQuery($all_statement[$count],$data);
+            if($result['status']){
+                $ex_status_count ++;
+            } else{
+                $ex_status_count;
+            }
+        }
+        if($ex_status_count == count($all_statement)){
+            $pdo->commit();
+            $execution_status = 1;
+        } else{
+            $pdo->rollBack();
+            $execution_status = 1;
+        }
+        return $execution_status;
     }
     public static function updateFilesStatus($file_name){
         $data = [
@@ -60,4 +80,6 @@ class MigrationClass{
         return $result['status'];
     }
 }
+
+
 ?>

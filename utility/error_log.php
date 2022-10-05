@@ -9,7 +9,8 @@ class ErrorLog{
         {
             $content = arrayToStr($content);
         }
-        $user_name = $_SESSION['user_name'];
+        // $user_name = $_SESSION['user_name'];
+        $user_name = 'subhendu';
         
         $date = date('d-m-y');
         $time = date('d-m-y h:i:s');
