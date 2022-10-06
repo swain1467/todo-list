@@ -5,6 +5,15 @@ error_reporting(E_ALL);
 require_once(LIB_DIR."/db/query_builder.php");
 require_once(LIB_DIR."/db/DBCore.class.php");
 class MigrationClass{
+    public static function createMigrationTable($db_migration_table){
+        $data = null;
+        $result = DBCore::executeQuery($db_migration_table,$data);
+            if($result['status']){
+                return 1;
+            } else{
+                return 0;
+            } 
+    }
     public static function insertFiles($items){
         array_multisort(array_map('filemtime', $items), SORT_NUMERIC, SORT_DESC, $items);
         foreach($items AS $file_name){
@@ -47,7 +56,7 @@ class MigrationClass{
         $data = null;
         $all_statement = array();
         $all_statement = explode(";",$sql_statement);
-        $ex_status_count = 0;
+        $ex_status_count = 1;
         $pdo = pdo_connect();
         $pdo->beginTransaction();
         for($count=0; $count<count($all_statement); $count++){
@@ -80,6 +89,4 @@ class MigrationClass{
         return $result['status'];
     }
 }
-
-
 ?>

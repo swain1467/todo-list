@@ -16,8 +16,10 @@ class DBCore {
 			ErrorLog::log($data);
 		}
 		if(!$pdoStatus){
-			ErrorLog::log($pdoStmt->errorInfo());
-			DefaultErrorLog::defaultLog($pdoStmt->errorInfo());
+			if(PDO_LOG){
+				ErrorLog::log($pdoStmt->errorInfo());
+				DefaultErrorLog::defaultLog($pdoStmt->errorInfo());
+			}
 		}
     	return [
     		'status' => $pdoStatus ? 1: 0,
