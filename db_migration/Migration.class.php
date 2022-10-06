@@ -63,7 +63,7 @@ class MigrationClass{
             $execution_status = 1;
         } else{
             $pdo->rollBack();
-            $execution_status = 1;
+            $execution_status = 0;
         }
         return $execution_status;
     }

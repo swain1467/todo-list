@@ -3464,3 +3464,15 @@ DB_Log_Query->SELECT file_name FROM db_migration WHERE status = :status ORDER BY
 05-10-22 07:19:20::subhendu
 ["42000",1065,"Query was empty"]
 
+05-10-22 07:28:33::subhendu
+["42S02",1051,"Unknown table 'assignment12092022.task_label_mapping'"]
+
+05-10-22 07:28:33::subhendu
+["42S02",1051,"Unknown table 'assignment12092022.label_master'"]
+
+05-10-22 07:28:33::subhendu
+["42000",1065,"Query was empty"]
+
+05-10-22 07:28:47::subhendu
+["42000",1065,"Query was empty"]
+
