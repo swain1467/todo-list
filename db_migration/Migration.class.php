@@ -5,9 +5,13 @@ error_reporting(E_ALL);
 require_once(LIB_DIR."/db/query_builder.php");
 require_once(LIB_DIR."/db/DBCore.class.php");
 class MigrationClass{
-    public static function createMigrationTable($db_migration_table){
-        $data = null;
-        $result = DBCore::executeQuery($db_migration_table,$data);
+    public static function createMigrationTable(){
+        $db_migration_table = "CREATE TABLE IF NOT EXISTS db_migration(
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            file_name VARCHAR(50) NOT NULL,
+            status TINYINT DEFAULT 0
+        );";
+        $result = DBCore::executeQuery($db_migration_table,$data = null);
             if($result['status']){
                 return 1;
             } else{
@@ -53,14 +57,13 @@ class MigrationClass{
            return $all_rows;
     }
     public static function executeSql($sql_statement){
-        $data = null;
         $all_statement = array();
         $all_statement = explode(";",$sql_statement);
         $ex_status_count = 1;
         $pdo = pdo_connect();
         $pdo->beginTransaction();
         for($count=0; $count<count($all_statement); $count++){
-            $result = DBCore::executeQuery($all_statement[$count],$data);
+            $result = DBCore::executeQuery($all_statement[$count],$data = null);
             if($result['status']){
                 $ex_status_count ++;
             } else{
@@ -68,11 +71,11 @@ class MigrationClass{
             }
         }
         if($ex_status_count == count($all_statement)){
+            $execution_status = 1; 
             $pdo->commit();
-            $execution_status = 1;
         } else{
-            $pdo->rollBack();
             $execution_status = 0;
+            $pdo->rollBack();
         }
         return $execution_status;
     }
@@ -87,6 +90,20 @@ class MigrationClass{
         ->where('file_name = :file_name');
         $result = DBCore::executeQuery($update_query,$data);
         return $result['status'];
+    }
+    public static function dbTransaction(){
+        $pdo = pdo_connect();
+        $pdo->beginTransaction();
+    }
+    public static function dbCommit(){
+        $pdo = pdo_connect();
+        $pdo->commit();
+        $pdo = null;
+    }
+    public static function dbRollBack(){ 
+        $pdo = pdo_connect();
+        $pdo->rollBack();
+        $pdo = null;
     }
 }
 ?>

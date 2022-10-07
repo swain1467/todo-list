@@ -8,14 +8,7 @@ if (!isset($argc) || is_null($argc))
 { 
     echo '<h1 style="color:red; font-weight:bold; text-align:center;">Sorry! Access denied</h1>';
 } else {
-    $db_migration_table = "CREATE TABLE IF NOT EXISTS db_migration(
-                                id INT AUTO_INCREMENT PRIMARY KEY,
-                                file_name VARCHAR(50) NOT NULL,
-                                status TINYINT DEFAULT 0
-                            );";
-
-    $ex_status = MigrationClass::createMigrationTable($db_migration_table);
-
+    $ex_status = MigrationClass::createMigrationTable();
     if($ex_status){
         $items = glob("*.sql", GLOB_NOSORT);
 
@@ -26,11 +19,14 @@ if (!isset($argc) || is_null($argc))
         foreach($all_new_files as $file){
             $file_name = $file['file_name'];
             $sql_statement  = file_get_contents(DB_MIGRATION.$file_name);
+            // MigrationClass::dbTransaction();
             $execution_status = MigrationClass::executeSql($sql_statement);
             if($execution_status){
                 MigrationClass::updateFilesStatus($file_name);
+                // MigrationClass::dbCommit();
             } else{
                 echo"Oops! Something went wrong\n";
+                // MigrationClass::dbRollBack();
                 exit();
             }
         }

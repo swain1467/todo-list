@@ -1,5 +1,4 @@
 <?php
-require_once(UTILITY_DIR."file_include.php");
 require_once(LIB_DIR."/db/query_builder.php");
 require_once(LIB_DIR."/db/DBCore.class.php");
 

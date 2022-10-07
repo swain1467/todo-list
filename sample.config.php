@@ -1,7 +1,7 @@
 <?php
-define('DB_NAME',"assignment12092022");
-define('DB_USER_NAME',"mindfire");
-define('DB_PASSWORD',"mindfire");
+define('DB_NAME',"your_db_name");
+define('DB_USER_NAME',"your_user_name");
+define('DB_PASSWORD',"your_db_password");
 
 define('ERROR_REPORTING',1);
 define('DEFAULT_ERROR_LOG',0);
