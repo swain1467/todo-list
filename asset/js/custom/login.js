@@ -18,5 +18,9 @@ $(document).ready(function(){
             'txtPassword': {validators: {notEmpty: {message: 'Required'}}},
         }
     });
+
+    $("#btnGmail").click(function(){
+        window.open($('#gmail_outh').val(),'_self'); 
+      }); 
 });
 

@@ -1,4 +1,22 @@
 <?php
+require_once("GmailOAuth/gmail_config.php");
+if(isset($_GET["code"]))
+{
+ $token = $google_client->fetchAccessTokenWithAuthCode($_GET["code"]);
+ if(!isset($token['error']))
+ {
+  $google_client->setAccessToken($token['access_token']);
+
+  $google_service = new Google_Service_Oauth2($google_client);
+
+  $data = $google_service->userinfo->get();
+
+  if(!empty($data['email']))
+  {
+   $_SESSION['user_name'] = $data['email'];
+  }
+ }
+}
 require_once("config.php");
 require_once(UTILITY_DIR."cdn_link.php");
 require_once(UTILITY_DIR."check_login.php");

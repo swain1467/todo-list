@@ -3,9 +3,12 @@ require_once("config.php");
 require_once(UTILITY_DIR."cdn_link.php");
 require_once(UTILITY_DIR."check_login.php");
 require_once(LIB_DIR."db/db_connection.php");
+require_once(ROOT_DIR."GmailOAuth/gmail_config.php");
+
 checkSession();
 $pdo = pdo_connect();
 $msg = '';
+
 if(isset($_POST['btnSubmit']))
 {
     $txtUserName = isset($_POST['txtUserName']) ? $_POST['txtUserName'] : '';
@@ -76,6 +79,7 @@ $pdo = null;
                     <div class="text-center mt-4 name">
                         T/D
                     </div>
+                    <input type="hidden" id = "gmail_outh" value = <?php echo $google_client->createAuthUrl()?> autocomplete="off"/>
                     <form class="p-3 mt-3" id="frmLogin" name="frmLogin" method="POST">
                          <div class="form-field d-flex align-items-center form-group">
                             <span class="fa fa-user"></span>
@@ -86,6 +90,7 @@ $pdo = null;
                             <input type="password" name="txtPassword" id="txtPassword" placeholder="Enter password" autocomplete="off"/>
                         </div>
                         <button type="submit" id="btnSubmit" name="btnSubmit" value="btnSubmit" class="btn mt-3">Login <i class="fa fa-arrow-circle-right fa-lg"></i></button>
+                        <button type="button" id="btnGmail" name="btnGmail" value="btnGmail" class="btn mt-3 btn-gmail" style=" background-color: #c5111a;">Login With Gmail<i class="fa fa-arrow-circle-right fa-lg"></i></button>
                     </form>
                     <div class="text-center fs-6">
                         Don't have an account ? <a href="signup.php">Sign up</a>
