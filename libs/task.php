@@ -2,14 +2,20 @@
 require_once(LIB_DIR."/db/query_builder.php");
 require_once(LIB_DIR."/db/DBCore.class.php");
 
-function getRowCount($data){
-
-    $selectQuery = (new SelectQueryBuilder())
-    ->select('id', 'CONCAT(header,":",content) as task', 'header', 'content')
-    ->from('task_master')
-    ->where('created_by = :user_name', 'status = :status')
-    ->orderBy('created_on');
-
+function getRowCount($data,$task_status){
+    if($task_status != ''){
+        $selectQuery = (new SelectQueryBuilder())
+        ->select('id', 'CONCAT(header,":",content) as task', 'header', 'content')
+        ->from('task_master')
+        ->where('created_by = :user_name', 'status = :status', 'mark_done =:mark_done')
+        ->orderBy('created_on');
+    }else{
+        $selectQuery = (new SelectQueryBuilder())
+        ->select('id', 'CONCAT(header,":",content) as task', 'header', 'content')
+        ->from('task_master')
+        ->where('created_by = :user_name', 'status = :status')
+        ->orderBy('created_on');
+    }
     $result = DBCore::executeQuery($selectQuery,$data);
     $all_rows = DBCore::getAllRows($result);
 
@@ -17,28 +23,41 @@ function getRowCount($data){
 }
 class TaskModel {
     //Task Select  
-    public static function getTaskDetails($length, $start, $search, $user_name, $status) {
+    public static function getTaskDetails($task_status, $length, $start, $search, $user_name, $status) {
 
         $output = array(	
             'aaData' => array(),
             'status' => ''
         );
-    
-        $data = [
-            'user_name' => $user_name,
-            'status' => $status
-        ];
+        if($task_status != ''){
+            $data = [
+                'user_name' => $user_name,
+                'status' => $status,
+                'mark_done' => $task_status
+            ];
+            $selectQuery = (new SelectQueryBuilder())
+                ->select('id', 'CONCAT(header,":",content) as task', 'header', 'content','mark_done')
+                ->from('task_master')
+                ->where('created_by = :user_name', 'status = :status', 'mark_done =:mark_done')
+                ->orderBy('created_on')
+                ->limit($length)
+                ->offSet($start);
+        }else{
+            $data = [
+                'user_name' => $user_name,
+                'status' => $status
+            ];
+            $selectQuery = (new SelectQueryBuilder())
+                ->select('id', 'CONCAT(header,":",content) as task', 'header', 'content','mark_done')
+                ->from('task_master')
+                ->where('created_by = :user_name', 'status = :status')
+                ->orderBy('created_on')
+                ->limit($length)
+                ->offSet($start);
+        }
+        $output['recordsTotal'] = getRowCount($data,$task_status);
+        $output['recordsFiltered'] = getRowCount($data,$task_status);
 
-        $output['recordsTotal'] = getRowCount($data);
-        $output['recordsFiltered'] = getRowCount($data);
-    
-        $selectQuery = (new SelectQueryBuilder())
-                        ->select('id', 'CONCAT(header,":",content) as task', 'header', 'content')
-                        ->from('task_master')
-                        ->where('created_by = :user_name', 'status = :status')
-                        ->orderBy('created_on')
-                        ->limit($length)
-                        ->offSet($start);
         $result = DBCore::executeQuery($selectQuery,$data);
         
         $all_rows = DBCore::getAllRows($result);
@@ -135,7 +154,7 @@ class TaskModel {
         
         $data = [
             'updated_on' => date("Y-m-d H:i:s"),
-            'status' => 0,
+            'status' => $status,
             'id' => $id
         ];
     
@@ -149,6 +168,35 @@ class TaskModel {
             if($result['status']){
                 $output['status'] = 'Success';
                 $output['message'] = 'Task deleted successfully';
+            } else{
+                $output['status'] = 'Failure';
+                $output['message'] = 'Oops! something Went wrong';
+            }
+        return $output;
+    }
+    //Task Delete 
+    public static function markDone($id, $status) {
+        $output = array(	
+            'status' => '',
+            'message' => '',
+        );
+        
+        $data = [
+            'updated_on' => date("Y-m-d H:i:s"),
+            'mark_done' => $status,
+            'id' => $id
+        ];
+    
+        $update_query = (new UpdateQueryBuilder())
+        ->update('task_master')
+        ->set('updated_on', 'mark_done')
+        ->where('id = :id');
+    
+        $result = DBCore::executeQuery($update_query,$data);
+    
+            if($result['status']){
+                $output['status'] = 'Success';
+                $output['message'] = 'This task now mark as done';
             } else{
                 $output['status'] = 'Failure';
                 $output['message'] = 'Oops! something Went wrong';

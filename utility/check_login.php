@@ -1,5 +1,4 @@
 <?php 
-session_start();
 function checkLogIn(){
     if(!isset($_SESSION['user_name']))
     {

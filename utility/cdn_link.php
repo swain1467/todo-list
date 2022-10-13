@@ -14,7 +14,8 @@ function cssLink() {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <!-- Swal2 -->
     <link rel="stylesheet" href="/asset/css/libs/sweetalert2.min.css">
-    
+    <!-- Selectize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.14.0/css/selectize.bootstrap5.min.css">
 
 <?php
 }
@@ -39,6 +40,8 @@ function jsLink() {
     <script src="https://cdn.datatables.net/buttons/1.4.1/js/buttons.print.min.js"></script>
     <!-- Swal2 -->
     <script src="/asset/js/libs/sweetalert2.min.js"></script>
+    <!-- Selectize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.14.0/js/selectize.min.js"></script>
 <?php 
 }
 ?>

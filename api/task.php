@@ -11,11 +11,12 @@ $user_name = $_SESSION['user_name'];
 try{
     switch($action){
         case 'getTaskDetails':{
+            $task_status = isset($_GET['task_status']) ? $_GET['task_status'] : '';
             $length = isset($_GET['length']) ? $_GET['length'] : '';
             $start = isset($_GET['start']) ? $_GET['start'] : '';
             $search = isset($_GET['search']['value']) ? $_GET['search']['value'] : '';
             $status = 1;
-            $output = TaskModel::getTaskDetails($length, $start, $search, $user_name, $status); //Get task list
+            $output = TaskModel::getTaskDetails($task_status, $length, $start, $search, $user_name, $status); //Get task list
             break;
         }
         case 'saveTask':{
@@ -36,6 +37,12 @@ try{
             $id = isset($_POST['id']) ? $_POST['id'] : '';
             $status = 0;
             $output = TaskModel::deleteTask($id, $status); //Update Task
+            break;	                                      	                                         	   
+        }
+        case 'markDone':{
+            $id = isset($_POST['id']) ? $_POST['id'] : '';
+            $status = 1;
+            $output = TaskModel::markDone($id, $status); //Update Task
             break;	                                      	                                         	   
         }
     }

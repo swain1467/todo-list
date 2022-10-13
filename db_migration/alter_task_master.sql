@@ -1,0 +1,1 @@
+ALTER TABLE task_master ADD COLUMN mark_done TINYINT DEFAULT 0;

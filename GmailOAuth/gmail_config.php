@@ -1,14 +1,6 @@
 <?php
-define('CLIENT_ID',"300152603364-u7dm3vaq9ifp4sk4ip94jpafb2ug6kr7.apps.googleusercontent.com");
-define('CLIENT_SECRET',"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");
-?>
-<?php
-
 //start session on web page
 session_start();
-
-//config.php
-
 //Include Google Client Library for PHP autoload file
 require_once("vendor/autoload.php");
 

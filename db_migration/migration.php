@@ -1,5 +1,15 @@
 <?php
-require_once("../config.php");
+$file = fopen("db_migration_lock.lock","r+");
+ 
+// exclusive lock, LOCK_NB serves as a bitmask to prevent flock() to block the code to run while the file is locked.
+// without the LOCK_NB, it won't go inside the if block to echo the string
+if (!flock($file,LOCK_EX|LOCK_NB))
+{
+    echo "Unable to obtain lock, the previous process is still going on."; 
+}
+else
+{
+    require_once("../config.php");
 require_once(DB_MIGRATION."Migration.class.php");
 // How to prevent from browser and post man type of tool
 ini_set('register_argc_argv', 0);  
@@ -35,4 +45,7 @@ if (!isset($argc) || is_null($argc))
         echo"Something went wrong please run the all sql statement of every file inside the db_migration folder\n";
     }
 }
+    flock($file,LOCK_UN);
+}
+fclose($file);
 ?>

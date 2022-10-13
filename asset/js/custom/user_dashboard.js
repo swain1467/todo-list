@@ -1,4 +1,9 @@
 $(document).ready(function(){
+    $('#selMarkDone').selectize();
+    $("#selMarkDone").change(function(){
+        let task_status = $('#selMarkDone').val();
+		dtblTask.ajax.url("api/task.php?action=getTaskDetails&task_status="+task_status).load();
+      }); 
     // Data table for task management
     let dtblTask = $('#dtblTask').DataTable({
         lengthMenu: [
@@ -10,8 +15,7 @@ $(document).ready(function(){
         bServerSide: true,//server side pagination
         ajax: {
             "url": "api/task.php?action=getTaskDetails",
-            "type": "GET",
-            "data": {}
+            "type": "GET"
           },
         bStateSave: false,
         bPaginate: true,
@@ -25,13 +29,23 @@ $(document).ready(function(){
                 "<'row'<'col-lg-12 col-md-12 col-sm-12'tr>>" +
                 "<'row'<'col-lg-9 col-md-9 col-sm-9'i><'col-lg-3 col-md-3 col-sm-3'p>>",
         "aoColumns": [
-            { "data": 'task', "name": "task","sWidth": "90%"},
-        	{
-                "sName": "action",
-                "data": null,"sWidth": "10%",
-                "className": "text-center",
-             	"defaultContent": "<button class='btn btn-warning btn-sm action-btn' onclick='updateTask(event)'><i class='fa fa-edit'></i></button>&nbsp;&nbsp;<button class='btn btn-danger btn-sm action-btn' onclick='deleteTask(event)'><i class='fa fa-trash'></i></button>"
-            },
+            { "data": 'task', "name": "task","sWidth": "80%"},
+            {"data" : "mark_done", "name": "mark_done","sWidth": "20%", "className": "text-center",
+			mRender: function (data, type, val) { 
+					if(val.mark_done == 0)
+					{
+						return `<button class='btn btn-warning btn-sm action-btn' onclick='updateTask(event)'><i class='fa fa-edit'></i></button>&nbsp;&nbsp;
+                        <button class='btn btn-danger btn-sm action-btn' onclick='deleteTask(event)'><i class='fa fa-trash'></i></button>&nbsp;&nbsp
+                        <button class='btn btn-primary btn-sm action-btn' onclick='markDone(event)'><i class='fa fa-check'></i></button>`;
+					}
+					else
+					{
+						return `<button class='btn btn-warning btn-sm action-btn' onclick='updateTask(event)'><i class='fa fa-edit'></i></button>&nbsp;&nbsp;
+                        <button class='btn btn-danger btn-sm action-btn' onclick='deleteTask(event)'><i class='fa fa-trash'></i></button>&nbsp;&nbsp
+                        <span title = "Marked as done" style ='color:green; font-weight: bold; font-size:20px;'><i class='fa fa-check'></i></span>`;
+					}
+				}
+			},
         ],
         buttons: [{
             text: '<button id="addTask" class="btn btn-success btn-sm"><i class="fa fa-plus"></i>&nbsp;Add</button>',
@@ -134,6 +148,48 @@ function deleteTask(event) {
 	}).then(function() {
 		$.ajax({
 			url: "api/task.php?action=deleteTask",
+			type: "POST",
+			data: { id:dtblTask.fnGetData(row)['id'] },
+			success: function(response) {
+                var res = jQuery.parseJSON(response);
+                if(res.status == 'Success'){
+                    let dtblTask = $("#dtblTask").DataTable();
+                    dtblTask.ajax.reload();
+                    toastr.success(res.message);
+                } else{
+                    toastr.error(res.message);
+                }
+			},
+			error: function() {
+				toastr.error('Unable to process Submit Operation');
+			}
+		});
+	}, 
+	function(dismiss) {}).done();
+}
+// Task mark done function
+function markDone(event) {
+	var dtblTask = $('#dtblTask').dataTable();
+	$(dtblTask.fnSettings().aoData).each(function () {
+		$(this.nTr).removeClass('success');
+	});
+	var row;
+	if (event.target.tagName == "BUTTON" || event.target.tagName == "A")
+		row = event.target.parentNode.parentNode;
+	else if (event.target.tagName == "I")
+		row = event.target.parentNode.parentNode.parentNode;
+    swal({
+		title: 'Are you sure to mark done this task ?',
+		text: "",
+		type: 'info',
+		showCancelButton: true,
+		confirmButtonColor: '#d33',
+		cancelButtonColor: '#3085d6',
+		confirmButtonText: 'Yes',
+		animation: true
+	}).then(function() {
+		$.ajax({
+			url: "api/task.php?action=markDone",
 			type: "POST",
 			data: { id:dtblTask.fnGetData(row)['id'] },
 			success: function(response) {
